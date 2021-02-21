@@ -44,15 +44,15 @@ export default function Profile() {
           console.log(error);
           setProfileFunction("Error");
           console.log("Because of this Error Contact Section is Showed instead of Profile");
-          openSource.showGithubProfile = "false";
+          openSource.showGithubProfile = false;
       });
   }
   useEffect(() => {
-    if (openSource.showGithubProfile === "true") {
+    if (openSource.showGithubProfile) {
       getProfileData();
     }
   }, []);
-if (openSource.showGithubProfile === "true" && !(typeof prof === 'string' || prof instanceof String)){  
+if (openSource.showGithubProfile && !(typeof prof === 'string' || prof instanceof String)){  
     return (
       <Suspense fallback={renderLoader()}>
         <GithubProfileCard prof={prof} key={prof.id} /> 

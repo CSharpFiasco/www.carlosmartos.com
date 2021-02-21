@@ -20,15 +20,23 @@ body {
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 16px / 23px Montserrat, "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+form textarea, form input{
+  font-size: 16px;
+  font-family: Montserrat, "Montserrat", sans-serif;
+}
 /* Media Query */
-@media (max-width: 1380px) {
+@media (min-width: 1380px) {
   html,
   body {
-    font-size: 16px;
+    font-size: 19px;
     line-height: normal;
+  }
+  form textarea, form input{
+    font-size: 19px;
+    font-family: Montserrat, "Montserrat", sans-serif;
   }
 }
