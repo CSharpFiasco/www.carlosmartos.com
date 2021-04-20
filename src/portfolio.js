@@ -4,13 +4,14 @@
 // Your Summary And Greeting Section
 
 import emoji from "react-easy-emoji";
+import resume from "./assets/resume/Carlos_Martos_Resume_20210221.pdf"
 
 const greeting = {
   /* Your Summary And Greeting Section */
   username: "Carlos Martos",
   title: "Hi all, I'm Carlos",
-  subTitle: "A passionate Software Developer having an experience of building Web applications with .NET Core and Reactjs and some other cool libraries and frameworks.",
-  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
+  subTitle: "A passionate Software Developer having an experience of building web applications with .NET Core and Reactjs and some other cool libraries and frameworks.",
+  resumeLink: resume
 };
 
 // Your Social Media Link
@@ -19,7 +20,7 @@ const socialMediaLinks = {
 
   github: "https://github.com/csharpfiasco",
   linkedin: "https://www.linkedin.com/in/carlos-k-martos",
-  gmail: null,
+  gmail: "carloskmartos@gmail.com",
   gitlab: null,
   facebook: null,
   medium: null,
@@ -31,15 +32,16 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What i do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "DEDICATED FULL STACK DEVELOPER WITH COMPREHENSIVE KNOWLEDGE OF THE WEB DEVELOPMENT PROCESS",
   skills: [
-    emoji("⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji("⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean")
+    emoji("⚡ Develop single page applications with ReactJS and Tailwind CSS"),
+    emoji("⚡ ReactJS deployment with AWS Amplify"),
+    emoji("⚡ Relational database design"),
+    emoji("⚡ Refactor of legacy web apps to .NET Core API solutions with ReactJS front-end"),
   ],
 
-/* Make Sure You include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
+  /* Make Sure You include correct Font Awesome Classname to view your icon
+  https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
@@ -51,10 +53,6 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
@@ -63,19 +61,23 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-react"
     },
     {
+      skillName: "jira",
+      fontAwesomeClassname: "fab fa-jira"
+    },
+    {
       skillName: "nodejs",
       fontAwesomeClassname: "fab fa-node"
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
+      skillName: "git",
+      fontAwesomeClassname: "fab fa-git"
     },
     {
       skillName: "npm",
       fontAwesomeClassname: "fab fa-npm"
     },
     {
-      skillName: "sql-database",
+      skillName: "t-sql",
       fontAwesomeClassname: "fas fa-database"
     },
     {
@@ -83,16 +85,12 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-aws"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: ".net core",
+      fontAwesomeClassname: "fab fa-microsoft"
     },
     {
       skillName: "python",
       fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
     }
   ]
 };
@@ -124,29 +122,38 @@ const workExperiences = {
   viewExperiences: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",  
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Fullstack Developer",
+      company: "Spherexx",
+      companylogo: require("./assets/images/SpherexxLogo.png"),
+      date: "September 2017 – August 2020",
+      desc: "Classic ASP/.NET Framework/TSQL/Vue.js/jQuery",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Custom site builds for property management companies",
+        "Content management systems in Classic ASP and ASP.NET",
+        "Dashboards in .NET Framework with Vue frontend",
+        "Maintained multi-company beer distribution systems",
+        "Developer and Project Lead",
+        "Moved projects to version control (TFS)",
+        "Payment gateway with Square's Payment API"
       ]
     },
     {
-      role: "Front-End Developer",   
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",  
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Technical Lead",
+      company: "Techsico",
+      companylogo: require("./assets/images/TechsicoLogoWhite.png"),
+      date: "August 2020 – Current",
+      desc: ".NET Core/ReactJS/Tailwind CSS",
+      descBullets: [
+        "Head of Web Development",
+        "Maintained legacy internal management VB.NET system",
+        "Train junior developers in ReactJS and .NET Core",
+        "Maintained policies for AWS IAM",
+        "Managed public DNS names to load balancers via Route53",
+        "Maintained .NET Core API",
+        "Managed relational database including architecture and security",
+        "Product owner for Techsico's code infrastructure",
+        "DocuSign integration"
+      ]
     },
   ]
 };
@@ -157,7 +164,7 @@ To know how to get github key look at readme.md */
 const openSource = {
   githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
   githubUserName: "csharpfiasco", // Change to your github username to view your profile in Contact Section.
-  showGithubProfile :true // Set true or false to show Contact profile using Github, defaults to false 
+  showGithubProfile: true // Set true or false to show Contact profile using Github, defaults to false 
 };
 
 
@@ -231,7 +238,7 @@ const contactInfo = {
 
 const twitterDetails = {
 
-  userName : "twitter"//Replace "twitter" with your twitter username without @
-  
+  userName: "twitter"//Replace "twitter" with your twitter username without @
+
 };
-export { greeting, socialMediaLinks, skillsSection, techStack, workExperiences, openSource, bigProjects, achievementSection, blogSection, talkSection, podcastSection, contactInfo , twitterDetails};
+export { greeting, socialMediaLinks, skillsSection, techStack, workExperiences, openSource, bigProjects, achievementSection, blogSection, talkSection, podcastSection, contactInfo, twitterDetails };

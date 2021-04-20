@@ -26,13 +26,13 @@ function Header() {
               <a href="#experience">Work Experiences</a>
             </li>
           }
-          <li>
+          {/* <li>
             <a href="#opensource">Open Source</a>
-          </li>
+          </li> */}
           <li>
             <a href="#achievements">Achievements</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#blogs">Blogs</a>
           </li>
           <li>
@@ -40,7 +40,7 @@ function Header() {
           </li>
           <li>
             <a href="#contact">Contact Me</a>
-          </li>
+          </li> */}
         </ul>
       </header>
     </Headroom>

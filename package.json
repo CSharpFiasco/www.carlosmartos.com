@@ -1,7 +1,7 @@
 {
-  "homepage": "https://csharpfiasco.github.io/csharpfiasco.github.io",
+  "homepage": ".",
   "name": "csharpfiasco.github.io",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@apollo/react-hooks": "^3.1.4",
