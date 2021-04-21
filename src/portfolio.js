@@ -141,7 +141,7 @@ const workExperiences = {
       role: "Technical Lead",
       company: "Techsico",
       companylogo: require("./assets/images/TechsicoLogoWhite.png"),
-      date: "August 2020 – Current",
+      date: "August 2020 – March 2021",
       desc: ".NET Core/ReactJS/Tailwind CSS",
       descBullets: [
         "Head of Web Development",
@@ -153,6 +153,19 @@ const workExperiences = {
         "Managed relational database including architecture and security",
         "Product owner for Techsico's code infrastructure",
         "DocuSign integration"
+      ]
+    },
+    {
+      role: "Software Developer II",
+      company: "QuikTrip",
+      companylogo: require("./assets/images/QuikTripLogo.webp"),
+      date: "March 2020 – Current",
+      desc: ".NET Core/AngularJS",
+      descBullets: [
+        "Full stack development",
+        "Entity Framework Core",
+        "Unit Testing",
+        "SSIS",
       ]
     },
   ]
