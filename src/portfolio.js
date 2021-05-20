@@ -10,7 +10,7 @@ const greeting = {
   /* Your Summary And Greeting Section */
   username: "Carlos Martos",
   title: "Hi all, I'm Carlos",
-  subTitle: "A passionate Software Developer having an experience of building web applications with .NET Core and Reactjs and some other cool libraries and frameworks.",
+  subTitle: "A passionate Software Developer having an experience of building web applications with .NET Core and ReactJS and some other cool libraries and frameworks.",
   resumeLink: resume
 };
 
@@ -164,6 +164,7 @@ const workExperiences = {
       descBullets: [
         "Full stack development",
         "Entity Framework Core",
+        "Dependency Injection",
         "Unit Testing",
         "SSIS",
       ]
