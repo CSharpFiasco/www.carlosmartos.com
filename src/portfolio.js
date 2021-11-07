@@ -10,7 +10,7 @@ const greeting = {
   /* Your Summary And Greeting Section */
   username: "Carlos Martos",
   title: "Hi all, I'm Carlos",
-  subTitle: "A passionate Software Developer having an experience of building web applications with .NET Core and ReactJS and some other cool libraries and frameworks.",
+  subTitle: "A passionate Software Developer with experience building web applications with .NET Core and ReactJS and some other cool libraries and frameworks.",
   resumeLink: resume
 };
 
@@ -31,7 +31,7 @@ const socialMediaLinks = {
 // Your Skills Section
 
 const skillsSection = {
-  title: "What i do",
+  title: "What I do",
   subTitle: "DEDICATED FULL STACK DEVELOPER WITH COMPREHENSIVE KNOWLEDGE OF THE WEB DEVELOPMENT PROCESS",
   skills: [
     emoji("⚡ Develop single page applications with ReactJS and Tailwind CSS"),
