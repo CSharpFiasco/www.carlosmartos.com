@@ -162,11 +162,13 @@ const workExperiences = {
       date: "March 2020 – Current",
       desc: ".NET Core/AngularJS",
       descBullets: [
-        "Full stack development",
-        "Entity Framework Core",
+        "API development",
+        "Database design",
+        "Front-end development",
+        "Entity Framework",
         "Dependency Injection",
-        "Unit Testing",
-        "SSIS",
+        "Unit Tests (xUnit)",
+        "ETL (SSIS)",
       ]
     },
   ]
