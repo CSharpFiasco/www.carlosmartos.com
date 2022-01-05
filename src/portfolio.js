@@ -166,6 +166,8 @@ const workExperiences = {
         "Database design",
         "Front-end development",
         "Entity Framework",
+        "OData",
+        "Swagger (Swashbuckle)",
         "Dependency Injection",
         "Unit Tests (xUnit)",
         "ETL (SSIS)",
