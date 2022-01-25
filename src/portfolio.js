@@ -4,7 +4,7 @@
 // Your Summary And Greeting Section
 
 import emoji from "react-easy-emoji";
-import resume from "./assets/resume/Carlos_Martos_Resume_20210221.pdf"
+import resume from "./assets/resume/Carlos_Martos_Resume_20220124.pdf"
 
 const greeting = {
   /* Your Summary And Greeting Section */
