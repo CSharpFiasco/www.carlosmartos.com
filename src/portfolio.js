@@ -45,6 +45,22 @@ const skillsSection = {
 
   softwareSkills: [
     {
+      skillName: ".net",
+      fontAwesomeClassname: "fab fa-microsoft"
+    },
+    {
+      skillName: "mssql",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "angular",
+      fontAwesomeClassname: "fab fa-angular"
+    },
+    {
+      skillName: "git",
+      fontAwesomeClassname: "fab fa-git"
+    },
+    {
       skillName: "html-5",
       fontAwesomeClassname: "fab fa-html5"
     },
@@ -65,28 +81,12 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-jira"
     },
     {
-      skillName: "angular",
-      fontAwesomeClassname: "fab fa-angular"
-    },
-    {
-      skillName: "git",
-      fontAwesomeClassname: "fab fa-git"
-    },
-    {
       skillName: "npm",
       fontAwesomeClassname: "fab fa-npm"
     },
     {
-      skillName: "mssql",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
       skillName: "aws",
       fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: ".net",
-      fontAwesomeClassname: "fab fa-microsoft"
     },
     {
       skillName: "python",
