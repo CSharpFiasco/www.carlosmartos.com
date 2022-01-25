@@ -10,7 +10,7 @@ const greeting = {
   /* Your Summary And Greeting Section */
   username: "Carlos Martos",
   title: "Hi all, I'm Carlos",
-  subTitle: "A passionate Software Developer with experience building web applications with .NET Core and ReactJS and some other cool libraries and frameworks.",
+  subTitle: "A passionate Software Developer with experience building web applications with .NET, SQL Server and Angular",
   resumeLink: resume
 };
 
@@ -65,8 +65,8 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-jira"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "angular",
+      fontAwesomeClassname: "fab fa-angular"
     },
     {
       skillName: "git",
@@ -77,7 +77,7 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-npm"
     },
     {
-      skillName: "t-sql",
+      skillName: "mssql",
       fontAwesomeClassname: "fas fa-database"
     },
     {
@@ -85,7 +85,7 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-aws"
     },
     {
-      skillName: ".net core",
+      skillName: ".net",
       fontAwesomeClassname: "fab fa-microsoft"
     },
     {
@@ -171,6 +171,7 @@ const workExperiences = {
         "Dependency Injection",
         "Unit Tests (xUnit)",
         "ETL (SSIS)",
+        "Azure DevOps",
       ]
     },
   ]
