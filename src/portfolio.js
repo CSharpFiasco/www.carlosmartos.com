@@ -126,7 +126,7 @@ const workExperiences = {
       company: "Spherexx",
       companylogo: require("./assets/images/SpherexxLogo.png"),
       date: "September 2017 – August 2020",
-      desc: "Classic ASP/.NET Framework/MSSQL/Vue.js/jQuery",
+      desc: "Classic ASP/.NET Framework/MSSQL/jQuery",
       descBullets: [
         "Custom site builds for property management companies",
         "Content management systems in Classic ASP and ASP.NET",
