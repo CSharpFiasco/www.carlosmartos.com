@@ -126,7 +126,7 @@ const workExperiences = {
       company: "Spherexx",
       companylogo: require("./assets/images/SpherexxLogo.png"),
       date: "September 2017 – August 2020",
-      desc: "Classic ASP/.NET Framework/TSQL/Vue.js/jQuery",
+      desc: "Classic ASP/.NET Framework/MSSQL/Vue.js/jQuery",
       descBullets: [
         "Custom site builds for property management companies",
         "Content management systems in Classic ASP and ASP.NET",
@@ -142,7 +142,7 @@ const workExperiences = {
       company: "Techsico",
       companylogo: require("./assets/images/TechsicoLogoWhite.png"),
       date: "August 2020 – March 2021",
-      desc: ".NET Core/ReactJS/Tailwind CSS",
+      desc: ".NET Core/MSSQL/ReactJS/Tailwind CSS",
       descBullets: [
         "Head of Web Development",
         "Maintained legacy internal management VB.NET system",
@@ -160,7 +160,7 @@ const workExperiences = {
       company: "QuikTrip",
       companylogo: require("./assets/images/QuikTripLogo.webp"),
       date: "March 2020 – Current",
-      desc: ".NET Core/AngularJS",
+      desc: ".NET 6/MSSQL/AngularJS",
       descBullets: [
         "API development",
         "Database design",
