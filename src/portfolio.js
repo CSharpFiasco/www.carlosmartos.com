@@ -160,7 +160,7 @@ const workExperiences = {
       company: "QuikTrip",
       companylogo: require("./assets/images/QuikTripLogo.webp"),
       date: "March 2020 – Current",
-      desc: ".NET 6/MSSQL/AngularJS",
+      desc: ".NET 6/MSSQL/Angular",
       descBullets: [
         "API development",
         "Database design",
