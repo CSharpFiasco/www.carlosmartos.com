@@ -34,8 +34,8 @@ const skillsSection = {
   title: "What I do",
   subTitle: "DEDICATED FULL STACK DEVELOPER WITH COMPREHENSIVE KNOWLEDGE OF THE WEB DEVELOPMENT PROCESS",
   skills: [
-    emoji("⚡ Develop single page applications with ReactJS and Tailwind CSS"),
-    emoji("⚡ ReactJS deployment with AWS Amplify"),
+    emoji("⚡ Develop single page applications with Angular and ReactJS"),
+    emoji("⚡ ReactJS deployment with Azure Static Web App"),
     emoji("⚡ Relational database design"),
     emoji("⚡ Refactor of legacy web apps to .NET Core API solutions with ReactJS front-end"),
   ],
