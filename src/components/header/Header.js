@@ -8,7 +8,7 @@ function Header() {
   return (
     <Headroom>
       <header className="header">
-        <a href="" className="logo">
+        <a href="https://www.carlosmartos.com" className="logo">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -26,21 +26,9 @@ function Header() {
               <a href="#experience">Work Experiences</a>
             </li>
           }
-          {/* <li>
-            <a href="#opensource">Open Source</a>
-          </li> */}
           <li>
             <a href="#achievements">Achievements</a>
           </li>
-          {/* <li>
-            <a href="#blogs">Blogs</a>
-          </li>
-          <li>
-            <a href="#talks">Talks</a>
-          </li>
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li> */}
         </ul>
       </header>
     </Headroom>

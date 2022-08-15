@@ -227,25 +227,6 @@ const blogSection = {
   blogs: []
 };
 
-// Talks Sections
-
-const talkSection = {
-  title: "TALKS",
-  subtitle: emoji("I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"),
-
-  talks: []
-};
-
-// Podcast Section
-
-const podcastSection = {
-  title: "Podcast",
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: []
-};
-
 const contactInfo = {
   title: "Contact Me",
   subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
@@ -260,4 +241,4 @@ const twitterDetails = {
   userName: "twitter"//Replace "twitter" with your twitter username without @
 
 };
-export { greeting, socialMediaLinks, skillsSection, techStack, workExperiences, openSource, bigProjects, achievementSection, blogSection, talkSection, podcastSection, contactInfo, twitterDetails };
+export { greeting, socialMediaLinks, skillsSection, techStack, workExperiences, openSource, bigProjects, achievementSection, blogSection, contactInfo, twitterDetails };
