@@ -15,7 +15,7 @@ export default function Education() {
             </div>
           </Fade>
           <Fade right duration={1000}>
-            <div className="education-section" id="education">
+            <div className="education-section education-text-div" id="education">
               <h1 className="education-heading">Education</h1>
               <div className="education-card-container">
                 {educationInfo.schools.map((school, index) => (

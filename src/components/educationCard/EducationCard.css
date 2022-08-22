@@ -107,4 +107,10 @@
     max-width: 80%;
     margin: auto;
   }
+  .education-text-school, .education-text-subHeader, .education-text-duration, .education-text-desc {
+    text-align: center;
+  }
+  .education-card-left {
+    text-align: center;
+  }
 }
