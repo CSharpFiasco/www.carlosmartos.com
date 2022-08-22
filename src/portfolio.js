@@ -95,6 +95,27 @@ const skillsSection = {
   ]
 };
 
+// Education
+const educationInfo = {
+  display: true, // Set false to hide this section, defaults to true
+  schools: [
+    {
+      schoolName: "University of Tulsa",
+      logo: require("./assets/images/UniversityOfTulsa.png"),
+      subHeader: "Bachelor of Science Computer Science",
+      duration: "September 2013 - May 2017",
+      desc: "Proud graduate of the University of Tulsa",
+      descBullets: [
+        "Data Structures",
+        "Database Systems",
+        "Comparative Programming Languages",
+        "Operating Systems",
+        "Linear Algebra and Matrix Theory",
+      ]
+    }
+  ]
+};
+
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
@@ -177,15 +198,6 @@ const workExperiences = {
   ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
-const openSource = {
-  githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
-  githubUserName: "csharpfiasco", // Change to your github username to view your profile in Contact Section.
-  showGithubProfile: false // Set true or false to show Contact profile using Github, defaults to false 
-};
-
 
 // Some Big Projects You have worked with your company
 
@@ -241,4 +253,16 @@ const twitterDetails = {
   userName: "twitter"//Replace "twitter" with your twitter username without @
 
 };
-export { greeting, socialMediaLinks, skillsSection, techStack, workExperiences, openSource, bigProjects, achievementSection, blogSection, contactInfo, twitterDetails };
+export { 
+  greeting, 
+  socialMediaLinks, 
+  skillsSection, 
+  educationInfo,
+  techStack, 
+  workExperiences, 
+  bigProjects, 
+  achievementSection, 
+  blogSection, 
+  contactInfo, 
+  twitterDetails 
+};

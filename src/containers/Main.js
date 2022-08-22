@@ -6,6 +6,7 @@ import WorkExperience from "./workExperience/WorkExperience";
 import Achievement from "./achievement/Achievement";
 import Footer from "../components/footer/Footer";
 import Top from "./topbutton/Top";
+import Education from "./education/Education";
 
 export default class Main extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class Main extends Component {
         <Header />
         <Greeting />
         <Skills />
+        <Education />
         <WorkExperience />
         <Achievement />
         <Footer />
