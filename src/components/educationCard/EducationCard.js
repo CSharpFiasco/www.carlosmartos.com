@@ -1,5 +1,5 @@
 import React, {createRef} from "react";
-import {Fade, Slide} from "react-reveal";
+import {Fade} from "react-reveal";
 import "./EducationCard.css";
 
 export default function EducationCard({school}) {
@@ -54,7 +54,6 @@ export default function EducationCard({school}) {
           </div>
         </div>
       </Fade>
-      <Slide left duration={1500}></Slide>
     </div>
   );
 }
