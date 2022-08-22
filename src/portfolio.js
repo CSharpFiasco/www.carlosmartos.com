@@ -211,7 +211,7 @@ const achievementSection = {
     {
       title: "Reuse of variants in online repositories: Foraging for the fittest",
       subtitle: "Publication: 2016 IEEE Symposium on Visual Languages and Human-Centric Computing",
-      image: require("./assets/images/googleAssistantLogo.webp"),
+      image: require("./assets/images/googleAssistant.svg"),
       footerLink: [{ name: "IEEE Publication", url: "https://ieeexplore.ieee.org/document/7739674" }]
     }
   ]

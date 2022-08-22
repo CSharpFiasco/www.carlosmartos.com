@@ -14,9 +14,10 @@ export default function Achievement() {
           <p className="subTitle achievement-subtitle">{achievementSection.subtitle}</p>
         </div>
         <div className="achievement-cards-div">
-          {achievementSection.achivementsCards.map(card => {
+          {achievementSection.achivementsCards.map((card, index) => {
             return (
               <AchivementCard
+                key={index}
                 cardInfo={{
                   title: card.title,
                   description: card.subtitle,
