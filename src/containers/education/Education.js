@@ -10,11 +10,6 @@ export default function Education() {
       <div className="main" id="education">
         <div className="education-main-div">
           <Fade left duration={1000}>
-            <div className="skills-image-div">
-              <img alt="Developer Working" src={require("../../assets/images/developerActivity.svg")}></img>
-            </div>
-          </Fade>
-          <Fade right duration={1000}>
             <div className="education-section education-text-div" id="education">
               <h1 className="education-heading">Education</h1>
               <div className="education-card-container">
@@ -22,6 +17,11 @@ export default function Education() {
                   <EducationCard key={index} school={school} />
                 ))}
               </div>
+            </div>
+          </Fade>
+          <Fade right duration={1000}>
+            <div className="skills-image-div">
+              <img alt="Developer Working" src={require("../../assets/images/developerActivity.svg")}></img>
             </div>
           </Fade>
         </div>
