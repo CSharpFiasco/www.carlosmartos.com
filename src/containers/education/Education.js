@@ -2,14 +2,15 @@ import React from "react";
 import "./Education.css";
 import EducationCard from "../../components/educationCard/EducationCard";
 import { educationInfo } from "../../portfolio";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
+import svg from "../../assets/images/developerActivity.svg"
 
 export default function Education() {
   if (educationInfo.display) {
     return (
       <div className="main" id="education">
         <div className="education-main-div">
-          <Fade left duration={1000}>
+          <Fade direction="left" duration={1000}>
             <div className="education-section education-text-div" id="education">
               <h1 className="education-heading">Education</h1>
               <div className="education-card-container">
@@ -19,9 +20,9 @@ export default function Education() {
               </div>
             </div>
           </Fade>
-          <Fade right duration={1000}>
+          <Fade direction="right" duration={1000}>
             <div className="skills-image-div">
-              <img alt="Developer Working" src={require("../../assets/images/developerActivity.svg")}></img>
+              <img alt="Developer Working" src={svg}></img>
             </div>
           </Fade>
         </div>

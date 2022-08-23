@@ -2,11 +2,11 @@ import React from "react";
 import "./Achievement.css";
 import AchivementCard from "../../components/achievementCard/AchivementCard";
 import { achievementSection } from "../../portfolio";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 export default function Achievement() {
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <Fade direction="bottom" duration={1000} distance="20px">
     <div className="main" id="achievements">
       <div className="achievement-main-div">
         <div className="achievement-header">

@@ -1,5 +1,5 @@
 import React, {createRef} from "react";
-import {Fade} from "react-reveal";
+import {Fade} from "react-awesome-reveal";
 import "./EducationCard.css";
 
 export default function EducationCard({school}) {
@@ -19,7 +19,7 @@ export default function EducationCard({school}) {
     console.error(`Image of ${school.name} is missing in education section`);
   return (
     <div>
-      <Fade left duration={1000}>
+      <Fade direction="left" duration={1000}>
         <div className="education-card">
           <div className="education-card-left">
             <img
