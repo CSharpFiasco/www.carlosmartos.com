@@ -3,10 +3,6 @@
   "name": "csharpfiasco.github.io",
   "version": "0.1.1",
   "private": true,
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.19.2 <9"
-  },
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "colorthief": "2.3.2",
