@@ -4,7 +4,8 @@
   "version": "0.1.1",
   "private": true,
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -22,7 +23,6 @@
     "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "gh-pages -b dist -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
