@@ -181,7 +181,7 @@ const workExperiences = {
       role: "Software Developer II",
       company: "QuikTrip",
       companylogo: require("./assets/images/QuikTripLogo.webp"),
-      date: "March 2020 – Current",
+      date: "March 2021 – Current",
       desc: ".NET 6/MSSQL/Angular",
       descBullets: [
         "API development",
