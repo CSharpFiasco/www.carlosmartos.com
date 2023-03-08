@@ -38,7 +38,9 @@ const skillsSection = {
     emoji("⚡ Develop single page applications with Angular and ReactJS"),
     emoji("⚡ ReactJS deployment with Azure Static Web App"),
     emoji("⚡ Relational database design"),
-    emoji("⚡ Refactor of legacy web apps to .NET Core API solutions with ReactJS front-end"),
+    emoji("⚡ Refactor of legacy web apps to modern .NET API solutions with Angular front-end"),
+    emoji("⚡ Unit testing with xUnit and Jasmine"),
+    emoji("⚡ Azure DevOps and Github Actions builds and deployments to cloud and on-premise systems"),
   ],
 
   /* Make Sure You include correct Font Awesome Classname to view your icon
@@ -88,6 +90,10 @@ const skillsSection = {
     {
       skillName: "aws",
       fontAwesomeClassname: "fab fa-aws"
+    },
+    {
+      skillName: "azure",
+      fontAwesomeClassname: "fa fa-cloud"
     },
     {
       skillName: "python",
