@@ -1,7 +1,7 @@
 import React from "react";
 import "./AchievementCard.css";
 
-export default function AchivementCard({ cardInfo }) {
+export default function AchievementCard({ cardInfo }) {
   function openUrlInNewTab(url) {
     const win = window.open(url, "_blank");
     win.focus();

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Achievement.css";
-import AchivementCard from "../../components/achievementCard/AchivementCard";
+import AchievementCard from "../../components/achievementCard/AchievementCard";
 import { achievementSection } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 
@@ -14,9 +14,9 @@ export default function Achievement() {
           <p className="subTitle achievement-subtitle">{achievementSection.subtitle}</p>
         </div>
         <div className="achievement-cards-div">
-          {achievementSection.achivementsCards.map((card, index) => {
+          {achievementSection.achievementsCards.map((card, index) => {
             return (
-              <AchivementCard
+              <AchievementCard
                 key={index}
                 cardInfo={{
                   title: card.title,

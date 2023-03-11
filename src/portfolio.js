@@ -226,7 +226,7 @@ const achievementSection = {
   title: "Achievements And Publications",
   subtitle: null,
 
-  achivementsCards: [
+  achievementsCards: [
     {
       title: "Reuse of variants in online repositories: Foraging for the fittest",
       subtitle: "Publication: 2016 IEEE Symposium on Visual Languages and Human-Centric Computing",
@@ -260,16 +260,16 @@ const twitterDetails = {
   userName: "twitter"//Replace "twitter" with your twitter username without @
 
 };
-export { 
-  greeting, 
-  socialMediaLinks, 
-  skillsSection, 
+export {
+  greeting,
+  socialMediaLinks,
+  skillsSection,
   educationInfo,
-  techStack, 
-  workExperiences, 
-  bigProjects, 
-  achievementSection, 
-  blogSection, 
-  contactInfo, 
-  twitterDetails 
+  techStack,
+  workExperiences,
+  bigProjects,
+  achievementSection,
+  blogSection,
+  contactInfo,
+  twitterDetails
 };
