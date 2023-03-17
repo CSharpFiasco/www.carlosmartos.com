@@ -9,7 +9,7 @@ import svg from "../../assets/images/manOnTable.svg";
 
 export default function Greeting() {
   return (
-    <Fade direction="up" duration={1000}>
+    <Fade duration={1000}>
     <div className="greet-main" id="greeting">
       <div className="greeting-main">
         <div className="greeting-text-div">
