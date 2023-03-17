@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function Achievement() {
   return (
-    <Fade direction="bottom" duration={1000} distance="20px">
+    <Fade duration={1000}>
     <div className="main" id="achievements">
       <div className="achievement-main-div">
         <div className="achievement-header">
@@ -20,9 +20,9 @@ export default function Achievement() {
                 key={index}
                 cardInfo={{
                   title: card.title,
-                  description: card.subtitle,
+                  subtitle: card.subtitle,
                   image: card.image,
-                  footer: card.footerLink
+                  footerLink: card.footerLink
                 }}
               />
             );

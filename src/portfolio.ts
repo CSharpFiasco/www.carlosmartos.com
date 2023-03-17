@@ -3,9 +3,14 @@
 
 // Your Summary And Greeting Section
 
+import { ReactElement } from "react";
 import emoji from "react-easy-emoji";
-import resume from "./assets/resume/Carlos_Martos_Resume_20230111.pdf"
 import svg from "./assets/images/googleAssistant.svg";
+import resume from "./assets/resume/Carlos_Martos_Resume_20230111.pdf";
+import { AchievementCardSection } from "./models/AchievementCardSection";
+import { EducationInfo } from "./models/EducationInfo";
+import { SoftwareSkill } from "./models/SoftwareSkill";
+import { WorkExperienceSection } from "./models/WorkExperience";
 
 const greeting = {
   /* Your Summary And Greeting Section */
@@ -31,9 +36,18 @@ const socialMediaLinks = {
 
 // Your Skills Section
 
-const skillsSection = {
+const skillsSection: {
+  title: string,
+  subTitle: string,
+  skills: ReactElement[],
+  softwareSkills: SoftwareSkill[]
+} = {
   title: "What I do",
   subTitle: "DEDICATED FULL STACK DEVELOPER WITH COMPREHENSIVE KNOWLEDGE OF THE WEB DEVELOPMENT PROCESS",
+
+  /* Make Sure You include correct Font Awesome Classname to view your icon
+  https://fontawesome.com/icons?d=gallery */
+
   skills: [
     emoji("⚡ Develop single page applications with Angular and ReactJS"),
     emoji("⚡ ReactJS deployment with Azure Static Web App"),
@@ -42,9 +56,6 @@ const skillsSection = {
     emoji("⚡ Unit testing with xUnit and Jasmine"),
     emoji("⚡ Azure DevOps and Github Actions builds and deployments to cloud and on-premise systems"),
   ],
-
-  /* Make Sure You include correct Font Awesome Classname to view your icon
-  https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
@@ -103,7 +114,7 @@ const skillsSection = {
 };
 
 // Education
-const educationInfo = {
+const educationInfo: EducationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
@@ -123,30 +134,9 @@ const educationInfo = {
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
-
-const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
-  experience: [
-    {
-      Stack: "Frontend/Design",  //Insert stack or technology you have experience in
-      progressPercentage: "90%"  //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Backend",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "60%"
-    }
-  ]
-};
-
-
 // Your top 3 work experiences
 
-const workExperiences = {
+const workExperiences: WorkExperienceSection = {
   viewExperiences: true, //Set it to true to show workExperiences Section
   experience: [
     {
@@ -205,23 +195,9 @@ const workExperiences = {
   ]
 };
 
-
-// Some Big Projects You have worked with your company
-
-const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
-  projects: [
-    // {
-    //   image: require("./assets/images/saayaHealthLogo.webp"),
-    //   link: "http://saayahealth.com/"
-    // }
-  ]
-};
-
 // Your Achievement Section Include Your Certification Talks and More
 
-const achievementSection = {
+const achievementSection: AchievementCardSection = {
 
   title: "Achievements And Publications",
   subtitle: null,
@@ -265,9 +241,7 @@ export {
   socialMediaLinks,
   skillsSection,
   educationInfo,
-  techStack,
   workExperiences,
-  bigProjects,
   achievementSection,
   blogSection,
   contactInfo,

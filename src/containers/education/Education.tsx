@@ -7,6 +7,8 @@ import svg from "../../assets/images/developerActivity.svg"
 
 export default function Education() {
   if (educationInfo.display) {
+    console.log('education render');
+
     return (
       <div className="main" id="education">
         <div className="education-main-div">
@@ -14,8 +16,9 @@ export default function Education() {
             <div className="education-section education-text-div" id="education">
               <h1 className="education-heading">Education</h1>
               <div className="education-card-container">
-                {educationInfo.schools.map((school, index) => (
-                  <EducationCard key={index} school={school} />
+                {
+                educationInfo.schools.map((school) => (
+                  <EducationCard key={school.schoolName} school={school} />
                 ))}
               </div>
             </div>

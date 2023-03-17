@@ -1,9 +1,9 @@
 import React from "react";
 import "./Skills.css";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
+import SoftwareSkillComponent from "../../components/softwareSkills/SoftwareSkill";
 import { skillsSection } from "../../portfolio";
 import {Fade} from "react-awesome-reveal";
-import svg from "../../assets/images/programmer.svg"
+import svg from "../../assets/images/programmer.svg";
 
 export default function Skills() {
   return (
@@ -18,10 +18,10 @@ export default function Skills() {
         <div className="skills-text-div">
           <h1 className="skills-heading">{skillsSection.title} </h1>
           <p className="subTitle skills-text-subtitle">{skillsSection.subTitle}</p>
-          <SoftwareSkill />
+          <SoftwareSkillComponent />
           <div>
-            {skillsSection.skills.map((skills, index) => {
-              return <p key={index} className="subTitle skills-text">{skills}</p>;
+            {skillsSection.skills.map((skills) => {
+              return <p key={skills.key} className="subTitle skills-text">{skills}</p>;
             })}
           </div>
         </div>

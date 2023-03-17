@@ -5,11 +5,11 @@ import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import {Fade} from "react-awesome-reveal";
 import emoji from "react-easy-emoji";
-import svg from "../../assets/images/manOnTable.svg"
+import svg from "../../assets/images/manOnTable.svg";
 
 export default function Greeting() {
   return (
-    <Fade direction="bottom" duration={1000} distance="40px">
+    <Fade direction="up" duration={1000}>
     <div className="greet-main" id="greeting">
       <div className="greeting-main">
         <div className="greeting-text-div">
@@ -23,7 +23,6 @@ export default function Greeting() {
             <p className="greeting-text-p subTitle">{greeting.subTitle}</p>
             <SocialMedia />
             <div className="button-greeting-div">
-              {/* <Button text="Contact me" href="#contact" /> */}
               <Button text="See my resume" newTab={true} href={greeting.resumeLink} />
             </div>
           </div>
