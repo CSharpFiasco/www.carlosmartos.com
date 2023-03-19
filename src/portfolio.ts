@@ -23,15 +23,10 @@ const greeting = {
 // Your Social Media Link
 
 const socialMediaLinks = {
-
   github: "https://github.com/csharpfiasco",
   linkedin: "https://www.linkedin.com/in/carlos-k-martos",
   gmail: "carloskmartos@gmail.com",
-  gitlab: null,
-  facebook: null,
-  medium: null,
   stackoverflow: "https://stackoverflow.com/users/5303894/csharpfiasco"
-  // Instagram and Twitter are also supported in the links!
 };
 
 // Your Skills Section
