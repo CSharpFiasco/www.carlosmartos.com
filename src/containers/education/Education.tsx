@@ -3,12 +3,10 @@ import "./Education.css";
 import EducationCard from "../../components/educationCard/EducationCard";
 import { educationInfo } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
-import svg from "../../assets/images/developerActivity.svg"
+import svg from "../../assets/images/developerActivity.svg";
 
 export default function Education() {
   if (educationInfo.display) {
-    console.log('education render');
-
     return (
       <div className="main" id="education">
         <div className="education-main-div">
