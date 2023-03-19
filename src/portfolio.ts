@@ -18,7 +18,7 @@ const greeting = {
   title: "Hi all, I'm Carlos",
   subTitle: "A passionate Software Developer with experience building web applications with .NET, SQL Server and Angular",
   resumeLink: resume
-};
+} as const;
 
 // Your Social Media Link
 
