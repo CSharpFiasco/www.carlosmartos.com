@@ -11,6 +11,10 @@ import { AchievementCardSection } from "./models/AchievementCardSection";
 import { EducationInfo } from "./models/EducationInfo";
 import { SoftwareSkill } from "./models/SoftwareSkill";
 import { WorkExperienceSection } from "./models/WorkExperience";
+import universityOfTulsaUrl from "./assets/images/UniversityOfTulsa.png";
+import spherexxLogoUrl from "./assets/images/SpherexxLogo.png";
+import techsicoLogoUrl from "./assets/images/TechsicoLogoWhite.png";
+import quikTripLogoUrl from "./assets/images/QuikTripLogo.webp";
 
 const greeting = {
   /* Your Summary And Greeting Section */
@@ -114,7 +118,7 @@ const educationInfo: EducationInfo = {
   schools: [
     {
       schoolName: "University of Tulsa",
-      logo: require("./assets/images/UniversityOfTulsa.png"),
+      logo: universityOfTulsaUrl,
       subHeader: "Bachelor of Science Computer Science",
       duration: "September 2013 - May 2017",
       desc: "Proud graduate of the University of Tulsa",
@@ -137,7 +141,7 @@ const workExperiences: WorkExperienceSection = {
     {
       role: "Fullstack Developer",
       company: "Spherexx",
-      companylogo: require("./assets/images/SpherexxLogo.png"),
+      companylogo: spherexxLogoUrl,
       date: "September 2017 – August 2020",
       desc: "Classic ASP/.NET Framework/MSSQL/jQuery",
       descBullets: [
@@ -153,7 +157,7 @@ const workExperiences: WorkExperienceSection = {
     {
       role: "Technical Lead",
       company: "Techsico",
-      companylogo: require("./assets/images/TechsicoLogoWhite.png"),
+      companylogo: techsicoLogoUrl,
       date: "August 2020 – March 2021",
       desc: ".NET Core/MSSQL/ReactJS/Tailwind CSS",
       descBullets: [
@@ -171,7 +175,7 @@ const workExperiences: WorkExperienceSection = {
     {
       role: "Software Developer II",
       company: "QuikTrip",
-      companylogo: require("./assets/images/QuikTripLogo.webp"),
+      companylogo: quikTripLogoUrl,
       date: "March 2021 – Current",
       desc: ".NET 6/MSSQL/Angular",
       descBullets: [
