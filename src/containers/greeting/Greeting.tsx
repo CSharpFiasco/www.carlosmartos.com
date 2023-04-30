@@ -1,11 +1,11 @@
-import React from "react";
-import "./Greeting.css";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
-import { greeting } from "../../portfolio";
-import { Fade } from "react-awesome-reveal";
-import emoji from "react-easy-emoji";
-import svg from "../../assets/images/manOnTable.svg";
+import React from 'react';
+import './Greeting.css';
+import SocialMedia from '../../components/socialMedia/SocialMedia';
+import Button from '../../components/button/Button';
+import { greeting } from '../../portfolio';
+import { Fade } from 'react-awesome-reveal';
+import emoji from 'react-easy-emoji';
+import svg from '../../assets/images/manOnTable.svg';
 
 export default function Greeting() {
   return (
@@ -15,10 +15,8 @@ export default function Greeting() {
           <div className="greeting-text-div">
             <div>
               <h1 className="greeting-text">
-                {" "}
-                {greeting.title}
-                {" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
+                {' '}
+                {greeting.title} <span className="wave-emoji">{emoji('👋')}</span>
               </h1>
               <p className="greeting-text-p subTitle">{greeting.subTitle}</p>
               <SocialMedia />

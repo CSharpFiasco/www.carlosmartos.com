@@ -8,6 +8,6 @@ import eslint from 'vite-plugin-eslint';
 export default defineConfig({
   plugins: [react(), viteTsconfigPaths(), svgrPlugin(), eslint()],
   build: {
-    outDir: 'build'
-  }
+    outDir: 'build',
+  },
 });

@@ -1,9 +1,9 @@
-import React from "react";
-import "./Education.css";
-import EducationCard from "../../components/educationCard/EducationCard";
-import { educationInfo } from "../../portfolio";
-import { Fade } from "react-awesome-reveal";
-import svg from "../../assets/images/developerActivity.svg";
+import React from 'react';
+import './Education.css';
+import EducationCard from '../../components/educationCard/EducationCard';
+import { educationInfo } from '../../portfolio';
+import { Fade } from 'react-awesome-reveal';
+import svg from '../../assets/images/developerActivity.svg';
 
 export default function Education() {
   if (educationInfo.display) {
@@ -14,8 +14,7 @@ export default function Education() {
             <div className="education-section education-text-div" id="education">
               <h1 className="education-heading">Education</h1>
               <div className="education-card-container">
-                {
-                educationInfo.schools.map((school) => (
+                {educationInfo.schools.map((school) => (
                   <EducationCard key={school.schoolName} school={school} />
                 ))}
               </div>
