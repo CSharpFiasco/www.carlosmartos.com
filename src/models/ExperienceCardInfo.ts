@@ -2,7 +2,7 @@ export type ExperienceCardInfo = {
     company: string,
     desc: string,
     date: string,
-    companylogo: any,
+    companylogo: string,
     role: string,
     descBullets: string[]
   };

@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "vite",
+    "start": "vite --open",
     "serve": "vite preview",
     "build": "tsc && vite build",
     "lint": "eslint"

@@ -1,6 +1,6 @@
 export type School = {
     schoolName: string;
-    logo: any;
+    logo: string;
     subHeader: string;
     duration: string;
     desc: string;
