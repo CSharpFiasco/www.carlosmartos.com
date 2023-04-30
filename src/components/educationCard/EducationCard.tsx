@@ -1,22 +1,10 @@
 import React, { createRef } from 'react';
 import { School } from '../../models/EducationInfo';
 import './EducationCard.css';
+import DescriptionBullets from '../descriptionBullets/descriptionBullets';
 
 export default function EducationCard({ school }: { school: School }) {
   const imgRef = createRef<HTMLImageElement>();
-
-  const GetDescBullets = ({ descBullets }: { descBullets: string[] }) => {
-    return (
-      <>
-        {descBullets.map((item, i) => (
-          <li key={i} className="subTitle">
-            {item}
-          </li>
-        ))}
-      </>
-    );
-  };
-
   if (!school.logo) console.error(`Image of ${school.schoolName} is missing in education section`);
   return (
     <div>
@@ -39,7 +27,7 @@ export default function EducationCard({ school }: { school: School }) {
             <p className="education-text-desc">{school.desc}</p>
             <div className="education-text-bullets">
               <ul>
-                <GetDescBullets descBullets={school.descBullets} />
+                <DescriptionBullets descBullets={school.descBullets} />
               </ul>
             </div>
           </div>

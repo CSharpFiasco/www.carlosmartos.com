@@ -2,6 +2,7 @@ import React, { useState, createRef } from 'react';
 import './ExperienceCard.css';
 import ColorThief, { RGBColor } from 'colorthief';
 import { ExperienceCardInfo } from '../../models/ExperienceCardInfo';
+import DescriptionBullets from '../descriptionBullets/descriptionBullets';
 
 export default function ExperienceCard(cardInfo: ExperienceCardInfo) {
   const [colorArrays, setColorArrays] = useState<RGBColor>([0, 0, 0]);
@@ -15,18 +16,6 @@ export default function ExperienceCard(cardInfo: ExperienceCardInfo) {
   function rgb(values?: RGBColor) {
     return typeof values === 'undefined' ? null : 'rgb(' + values.join(', ') + ')';
   }
-
-  const GetDescBullets = ({ descBullets }: { descBullets: string[] }) => {
-    return (
-      <>
-        {descBullets.map((item, index) => (
-          <li key={index} className="subTitle">
-            {item}
-          </li>
-        ))}
-      </>
-    );
-  };
 
   return (
     <div className="experience-card">
@@ -50,7 +39,7 @@ export default function ExperienceCard(cardInfo: ExperienceCardInfo) {
         <h5 className="experience-text-date">{cardInfo.date}</h5>
         <p className="subTitle experience-text-desc">{cardInfo.desc}</p>
         <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} />
+          <DescriptionBullets descBullets={cardInfo.descBullets} />
         </ul>
       </div>
     </div>
