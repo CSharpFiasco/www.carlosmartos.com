@@ -1,10 +1,10 @@
-import React, {ReactElement} from 'react';
+import React, { ReactElement } from 'react';
 import Headroom from 'react-headroom';
 import './Header.css';
 import { greeting } from '../../portfolio';
 
 type Props = {
-  children?: ReactElement
+  children?: ReactElement;
 };
 
 function Header(props: Props) {
