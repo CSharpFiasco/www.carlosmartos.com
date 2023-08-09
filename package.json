@@ -7,24 +7,17 @@
         "node": "18.x",
         "npm": "9.x"
     },
-    "dependencies": {
-        "@emotion/react": "^11.10.8",
-        "colorthief": "^2.4.0",
-        "react": "^18.2.0",
-        "react-awesome-reveal": "^4.2.3",
-        "react-dom": "^18.2.0",
-        "react-easy-emoji": "1.8.1",
-        "react-headroom": "^3.2.1",
-        "react-router-dom": "^6.11.1",
-        "react-twitter-embed": "4.0.4"
-    },
     "scripts": {
         "predeploy": "npm run build",
         "start": "vite --open",
-        "serve": "vite preview",
+        "preview": "vite preview",
         "build": "tsc && vite build",
         "lint": "eslint",
-        "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
+        "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
+        "cy:open": "cypress open",
+        "cy:run": "cypress run --env \"base_url=https://www.carlosmartos.com\"",
+        "cy:run:local": "cypress run --env \"base_url=http://localhost:4178\"",
+        "cy:test:local": "start-server-and-test preview http-get://localhost:4178 cy:run:local"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -41,6 +34,17 @@
             "last 1 safari version"
         ]
     },
+    "dependencies": {
+        "@emotion/react": "^11.10.8",
+        "colorthief": "^2.4.0",
+        "react": "^18.2.0",
+        "react-awesome-reveal": "^4.2.3",
+        "react-dom": "^18.2.0",
+        "react-easy-emoji": "1.8.1",
+        "react-headroom": "^3.2.1",
+        "react-router-dom": "^6.11.1",
+        "react-twitter-embed": "4.0.4"
+    },
     "devDependencies": {
         "@types/jest": "^29.5.1",
         "@types/node": "^18.16.3",
@@ -50,9 +54,11 @@
         "@typescript-eslint/eslint-plugin": "^6.3.0",
         "@typescript-eslint/parser": "^6.3.0",
         "@vitejs/plugin-react": "^4.0.0",
+        "cypress": "^12.17.3",
         "eslint": "^8.39.0",
         "eslint-plugin-react": "^7.32.2",
         "prettier": "^3.0.1",
+        "start-server-and-test": "^2.0.0",
         "typescript": "^5.0.4",
         "vite": "^4.4.9",
         "vite-plugin-eslint": "^1.8.1",

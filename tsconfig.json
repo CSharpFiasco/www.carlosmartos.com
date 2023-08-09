@@ -3,8 +3,8 @@
         "target": "ES2020",
         "lib": ["dom", "dom.iterable", "ES2020"],
         "types": ["vite/client", "vite-plugin-svgr/client"],
+        "baseUrl": ".",
         "allowJs": false,
-        "skipLibCheck": false,
         "esModuleInterop": false,
         "allowSyntheticDefaultImports": true,
         "strict": true,
@@ -17,5 +17,5 @@
         "noEmit": true,
         "jsx": "react-jsx"
     },
-    "include": ["custom.d.ts", "src"]
+    "include": ["custom.d.ts", "**/*.ts"]
 }

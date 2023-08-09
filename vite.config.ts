@@ -10,4 +10,10 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
+  preview: {
+    port: 4178
+  },
+  server: {
+    port: 4178
+  }
 });
