@@ -7,12 +7,15 @@ import Achievement from './achievement/Achievement';
 import Footer from '../components/footer/Footer';
 import Top from './topbutton/Top';
 import Education from './education/Education';
+import Menu from './menu/Menu';
 
 export default class Main extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header>
+          <Menu />
+        </Header>
         <Greeting />
         <Skills />
         <Education />
