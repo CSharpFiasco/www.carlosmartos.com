@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import Headroom from 'react-headroom';
 import './Header.css';
-import { greeting, workExperiences, educationInfo } from '../../portfolio';
+import { greeting } from '../../portfolio';
 
-function Header() {
-  const exp = workExperiences.viewExperiences;
-  const education = educationInfo.display;
+type Props = {
+  children?: ReactElement
+};
+
+function Header(props: Props) {
   return (
     <Headroom>
       <header className="header">
@@ -18,24 +20,7 @@ function Header() {
         <label className="menu-icon" htmlFor="menu-btn">
           <span className="navicon"></span>
         </label>
-        <ul className="menu">
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          {education === true && (
-            <li>
-              <a href="#education">Education</a>
-            </li>
-          )}
-          {exp === true && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          <li>
-            <a href="#achievements">Achievements</a>
-          </li>
-        </ul>
+        {props.children}
       </header>
     </Headroom>
   );
