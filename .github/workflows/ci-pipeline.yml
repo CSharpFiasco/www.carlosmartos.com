@@ -1,0 +1,21 @@
+name: Continuous Integration Pipeline - www.carlosmartos.com
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - master
+
+jobs:
+    build_and_test:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'pull_request' && github.event.action != 'closed'
+        steps:
+            - name: Run build
+              run:
+                npm run build
+            - name: Run cypress
+              run: cy:test:local

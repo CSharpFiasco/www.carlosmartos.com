@@ -1,10 +1,12 @@
-let baseUrl: string;
+let baseUrl: string | undefined;
 
 describe('home page', () => {
     
 
     beforeEach(() => {
         baseUrl = Cypress.env('base_url');
+        if(typeof baseUrl !== 'string') throw new Error('base_url is not a string');
+
         cy.visit(baseUrl);
     });
 
