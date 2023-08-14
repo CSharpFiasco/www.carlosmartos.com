@@ -14,8 +14,11 @@ jobs:
         runs-on: ubuntu-latest
         if: github.event_name == 'pull_request' && github.event.action != 'closed'
         steps:
-            - name: Run build
-              run: npm ci |
-                npm run build
-            - name: Run cypress
-              run: cy:test:local
+          - uses: actions/checkout@v3
+            with:
+              submodules: true
+          - name: Run build
+            run:
+              npm run build
+          - name: Run cypress
+            run: cy:test:local
