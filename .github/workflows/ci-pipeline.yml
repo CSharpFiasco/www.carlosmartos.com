@@ -15,7 +15,7 @@ jobs:
         if: github.event_name == 'pull_request' && github.event.action != 'closed'
         steps:
             - name: Run build
-              run:
+              run: npm ci |
                 npm run build
             - name: Run cypress
               run: cy:test:local
