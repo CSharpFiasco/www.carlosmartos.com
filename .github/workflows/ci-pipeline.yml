@@ -18,7 +18,7 @@ jobs:
             with:
               submodules: true
           - name: Run build
-            run:
+            run: npm ci |
               npm run build
           - name: Run cypress
             run: cy:test:local
