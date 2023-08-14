@@ -12,6 +12,7 @@
         "start": "vite --open",
         "preview": "vite preview",
         "build": "tsc && vite build",
+        "test": "vitest",
         "lint": "eslint",
         "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
         "cy:open": "cypress open",
@@ -46,6 +47,8 @@
         "react-twitter-embed": "4.0.4"
     },
     "devDependencies": {
+        "@testing-library/jest-dom": "^6.0.0",
+        "@testing-library/react": "^14.0.0",
         "@types/jest": "^29.5.1",
         "@types/node": "^18.16.3",
         "@types/react": "^18.2.0",
@@ -57,12 +60,14 @@
         "cypress": "^12.17.3",
         "eslint": "^8.39.0",
         "eslint-plugin-react": "^7.32.2",
+        "jsdom": "^22.1.0",
         "prettier": "^3.0.1",
         "start-server-and-test": "^2.0.0",
         "typescript": "^5.0.4",
         "vite": "^4.4.9",
         "vite-plugin-eslint": "^1.8.1",
         "vite-plugin-svgr": "^3.2.0",
-        "vite-tsconfig-paths": "^4.2.0"
+        "vite-tsconfig-paths": "^4.2.0",
+        "vitest": "^0.34.1"
     }
 }
