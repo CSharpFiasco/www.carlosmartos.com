@@ -3,11 +3,11 @@ name: Continuous Integration Pipeline - www.carlosmartos.com
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - master
+      - main
 
 jobs:
     build_and_test:
