@@ -14,6 +14,7 @@ import universityOfTulsaUrl from './assets/images/UniversityOfTulsa.png';
 import spherexxLogoUrl from './assets/images/SpherexxLogo.png';
 import techsicoLogoUrl from './assets/images/TechsicoLogoWhite.png';
 import quikTripLogoUrl from './assets/images/QuikTripLogo.webp';
+import hoganLogo from './assets/images/hogan-logo.svg';
 
 const greeting = {
   /* Your Summary And Greeting Section */
@@ -176,7 +177,7 @@ const workExperiences: WorkExperienceSection = {
       role: 'Software Developer II',
       company: 'QuikTrip',
       companylogo: quikTripLogoUrl,
-      date: 'March 2021 – Current',
+      date: 'March 2021 – March 2023',
       desc: '.NET 6/MSSQL/Angular',
       descBullets: [
         'API development',
@@ -190,6 +191,22 @@ const workExperiences: WorkExperienceSection = {
         'ETL (SSIS)',
         'Azure DevOps',
       ],
+    },
+    {
+      role: 'Software Developer',
+      company: 'Hogan Assessments',
+      companylogo: hoganLogo,
+      date: 'March 2023 – Current',
+      desc: '.NET 6/CosmosDB/Angular',
+      descBullets: [
+        'Angular',
+        'Unit Tests (Jasmine)',
+        'E2E Tests (Cypress/Playwright)',
+        'API development',
+        'Swagger (Swashbuckle)',
+        'Unit Tests (xUnit)',
+        'Azure DevOps',
+      ]
     },
   ],
 };
