@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 let baseUrl: string | undefined;
 
 describe('home page', () => {
