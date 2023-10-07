@@ -1,21 +1,29 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
-        "lib": ["dom", "dom.iterable", "ES2020"],
+        "target": "ES2022",
+        "lib": ["dom", "dom.iterable", "ES2022"],
         "types": ["vite/client", "vite-plugin-svgr/client"],
         "baseUrl": ".",
         "allowJs": false,
-        "esModuleInterop": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "verbatimModuleSyntax": true,
+        "resolveJsonModule": true,
+        
         "allowSyntheticDefaultImports": true,
         "strict": true,
+        "noImplicitOverride": true,
         "forceConsistentCasingInFileNames": true,
         "noFallthroughCasesInSwitch": true,
-        "module": "ES2020",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+
+        "module": "ES2022",
+        "moduleResolution": "Bundler",
+        "moduleDetection": "force",
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
     },
     "include": ["custom.d.ts", "src"]
 }

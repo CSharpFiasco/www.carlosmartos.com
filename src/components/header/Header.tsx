@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
 import Headroom from 'react-headroom';
 import './Header.css';
 import { greeting } from '../../portfolio';

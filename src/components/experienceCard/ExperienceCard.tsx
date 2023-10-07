@@ -1,8 +1,9 @@
 import React, { useState, createRef } from 'react';
 import './ExperienceCard.css';
-import ColorThief, { RGBColor } from 'colorthief';
+import ColorThief from 'colorthief';
+import type { RGBColor } from 'colorthief';
 import DescriptionBullets from '../descriptionBullets/descriptionBullets';
-import { WorkExperience } from 'src/models/WorkExperience';
+import type { WorkExperience } from 'src/models/WorkExperience';
 
 export default function ExperienceCard(cardInfo: WorkExperience) {
   const [colorArrays, setColorArrays] = useState<RGBColor>([0, 0, 0]);

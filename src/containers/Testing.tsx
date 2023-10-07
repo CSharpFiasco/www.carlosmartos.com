@@ -4,7 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 import './Testing.css';
 
 export default class Testing extends Component {
-  render() {
+  override render() {
     return (
       <div>
         <Header />

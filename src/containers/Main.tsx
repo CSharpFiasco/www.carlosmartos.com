@@ -10,7 +10,7 @@ import Education from './education/Education';
 import Menu from './menu/Menu';
 
 export default class Main extends Component {
-  render() {
+  override render() {
     return (
       <div>
         <Header>

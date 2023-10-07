@@ -1,5 +1,5 @@
 import React, { createRef } from 'react';
-import { School } from '../../models/EducationInfo';
+import type { School } from '../../models/EducationInfo';
 import './EducationCard.css';
 import DescriptionBullets from '../descriptionBullets/descriptionBullets';
 
