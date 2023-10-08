@@ -206,7 +206,7 @@ const workExperiences: WorkExperienceSection = {
         'Swagger (Swashbuckle)',
         'Unit Tests (xUnit)',
         'Azure DevOps',
-      ]
+      ],
     },
   ],
 };

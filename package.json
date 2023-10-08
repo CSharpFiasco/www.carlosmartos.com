@@ -16,10 +16,13 @@
         "test:ci": "vitest --watch false",
         "lint": "eslint",
         "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
-        "cy:open": "cypress open",
-        "cy:run": "cypress run --env \"base_url=https://www.carlosmartos.com\"",
+        
         "cy:run:local": "cypress run --env \"base_url=http://localhost:4178\"",
-        "cy:test:local": "start-server-and-test preview http-get://localhost:4178 cy:run:local"
+        "cy:test:local": "start-server-and-test preview http-get://localhost:4178 cy:run:local",
+        "cy:open:local": "cypress open --env \"base_url=http://localhost:4178\"",
+
+        "cy:run:prod": "cypress run --env \"base_url=https://www.carlosmartos.com\"",
+        "cy:open:prod": "cypress open --env \"base_url=https://www.carlosmartos.com\""
     },
     "eslintConfig": {
         "extends": "react-app"
