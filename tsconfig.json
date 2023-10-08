@@ -25,5 +25,13 @@
         "noEmit": true,
         "jsx": "react-jsx",
     },
-    "include": ["custom.d.ts", "src"]
+    "include": ["custom.d.ts", "src"],
+
+    // Included until following is fixed: https://github.com/cypress-io/cypress/issues/27731
+    "ts-node": {
+        "compilerOptions": {
+          "module": "es2015",
+          "moduleResolution": "node"
+        }
+      },
 }
