@@ -2,14 +2,14 @@
 
 // Your Summary And Greeting Section
 
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import emoji from 'react-easy-emoji';
 import svg from './assets/images/googleAssistant.svg';
 import resume from './assets/resume/Carlos_Martos_Resume_20230111.pdf';
-import { AchievementCardSection } from './models/AchievementCardSection';
-import { EducationInfo } from './models/EducationInfo';
-import { SoftwareSkill } from './models/SoftwareSkill';
-import { WorkExperienceSection } from './models/WorkExperience';
+import type { AchievementCardSection } from './models/AchievementCardSection';
+import type { EducationInfo } from './models/EducationInfo';
+import type { SoftwareSkill } from './models/SoftwareSkill';
+import type { WorkExperienceSection } from './models/WorkExperience';
 import universityOfTulsaUrl from './assets/images/UniversityOfTulsa.png';
 import spherexxLogoUrl from './assets/images/SpherexxLogo.png';
 import techsicoLogoUrl from './assets/images/TechsicoLogoWhite.png';
@@ -206,7 +206,7 @@ const workExperiences: WorkExperienceSection = {
         'Swagger (Swashbuckle)',
         'Unit Tests (xUnit)',
         'Azure DevOps',
-      ]
+      ],
     },
   ],
 };

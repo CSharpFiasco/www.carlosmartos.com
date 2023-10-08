@@ -1,7 +1,7 @@
 import React from 'react';
 import './SoftwareSkill.css';
 import { skillsSection } from '../../portfolio';
-import { SoftwareSkill } from '../../models/SoftwareSkill';
+import type { SoftwareSkill } from '../../models/SoftwareSkill';
 
 export default function SoftwareSkillComponent() {
   return (

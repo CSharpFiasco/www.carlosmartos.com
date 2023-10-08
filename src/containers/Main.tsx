@@ -8,11 +8,13 @@ import Footer from '../components/footer/Footer';
 import Top from './topbutton/Top';
 import Education from './education/Education';
 import Menu from './menu/Menu';
+import Skip from 'src/components/skip/Skip';
 
 export default class Main extends Component {
-  render() {
+  override render() {
     return (
       <div>
+        <Skip />
         <Header>
           <Menu />
         </Header>

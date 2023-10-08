@@ -9,7 +9,11 @@ describe('home page', () => {
     cy.visit(baseUrl);
   });
 
-  it('should have a greeting text', () => {
+  it('should have expected elements', () => {
     cy.get('.greeting-text').should('contain.text', 'Carlos');
+
+    cy.get('#skip a').then(($el) => {
+      expect($el.position().left).to.be.lessThan(0);
+    });
   });
 });

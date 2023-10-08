@@ -1,5 +1,5 @@
 import React from 'react';
-import { AchievementCardInfo } from '../../models/AchievementCardSection';
+import type { AchievementCardInfo } from '../../models/AchievementCardSection';
 import './AchievementCard.css';
 
 export default function AchievementCard({ cardInfo }: { cardInfo: AchievementCardInfo }) {
