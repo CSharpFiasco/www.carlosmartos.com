@@ -154,7 +154,7 @@ const workExperiences = {
         'Moved projects to version control (TFS)',
         "Payment gateway with Square's Payment API",
       ],
-      backgroundColor: [4, 12, 36]
+      backgroundColor: [4, 12, 36],
     },
     {
       role: 'Technical Lead',
@@ -173,7 +173,7 @@ const workExperiences = {
         "Product owner for Techsico's code infrastructure",
         'DocuSign integration',
       ],
-      backgroundColor: [20, 52, 116]
+      backgroundColor: [20, 52, 116],
     },
     {
       role: 'Software Developer II',
@@ -193,7 +193,7 @@ const workExperiences = {
         'ETL (SSIS)',
         'Azure DevOps',
       ],
-      backgroundColor: [9, 6, 6]
+      backgroundColor: [9, 6, 6],
     },
     {
       role: 'Software Developer',
@@ -210,7 +210,7 @@ const workExperiences = {
         'Unit Tests (xUnit)',
         'Azure DevOps',
       ],
-      backgroundColor: [4, 4, 4]
+      backgroundColor: [4, 4, 4],
     },
   ],
 } as const satisfies WorkExperienceSection;
