@@ -142,7 +142,7 @@ const workExperiences = {
     {
       role: 'Fullstack Developer',
       company: 'Spherexx',
-      companylogo: spherexxLogoUrl,
+      companyLogo: spherexxLogoUrl,
       date: 'September 2017 – August 2020',
       desc: 'Classic ASP/.NET Framework/MSSQL/jQuery',
       descBullets: [
@@ -154,11 +154,12 @@ const workExperiences = {
         'Moved projects to version control (TFS)',
         "Payment gateway with Square's Payment API",
       ],
+      backgroundColor: [4, 12, 36],
     },
     {
       role: 'Technical Lead',
       company: 'Techsico',
-      companylogo: techsicoLogoUrl,
+      companyLogo: techsicoLogoUrl,
       date: 'August 2020 – March 2021',
       desc: '.NET Core/MSSQL/ReactJS/Tailwind CSS',
       descBullets: [
@@ -172,11 +173,12 @@ const workExperiences = {
         "Product owner for Techsico's code infrastructure",
         'DocuSign integration',
       ],
+      backgroundColor: [20, 52, 116],
     },
     {
       role: 'Software Developer II',
       company: 'QuikTrip',
-      companylogo: quikTripLogoUrl,
+      companyLogo: quikTripLogoUrl,
       date: 'March 2021 – March 2023',
       desc: '.NET 6/MSSQL/Angular',
       descBullets: [
@@ -191,11 +193,12 @@ const workExperiences = {
         'ETL (SSIS)',
         'Azure DevOps',
       ],
+      backgroundColor: [9, 6, 6],
     },
     {
       role: 'Software Developer',
       company: 'Hogan Assessments',
-      companylogo: hoganLogo,
+      companyLogo: hoganLogo,
       date: 'March 2023 – Current',
       desc: '.NET 6/CosmosDB/Angular',
       descBullets: [
@@ -207,6 +210,7 @@ const workExperiences = {
         'Unit Tests (xUnit)',
         'Azure DevOps',
       ],
+      backgroundColor: [4, 4, 4],
     },
   ],
 } as const satisfies WorkExperienceSection;
