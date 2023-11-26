@@ -22,6 +22,7 @@ export default function WorkExperience() {
                     companylogo={card.companylogo}
                     role={card.role}
                     descBullets={card.descBullets}
+                    backgroundColor={card.backgroundColor}
                   />
                 ))}
               </div>

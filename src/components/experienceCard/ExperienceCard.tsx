@@ -1,26 +1,19 @@
-import React, { useState, createRef } from 'react';
+import React, { createRef } from 'react';
 import './ExperienceCard.css';
-import ColorThief from 'colorthief';
-import type { RGBColor } from 'colorthief';
 import type { WorkExperience } from 'src/models/WorkExperience';
 import DescriptionBullets from '../descriptionBullets/descriptionBullets';
 
-export default function ExperienceCard(cardInfo: WorkExperience) {
-  const [colorArrays, setColorArrays] = useState<RGBColor>([0, 0, 0]);
+export default function ExperienceCard(cardInfo: Readonly<WorkExperience>) {
   const imgRef = createRef<HTMLImageElement>();
 
-  function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current, 10));
-  }
 
-  function rgb(values?: RGBColor) {
+  function rgb(values?: [number, number, number]) {
     return typeof values === 'undefined' ? null : `rgb(${values.join(', ')})`;
   }
 
   return (
     <div className="experience-card">
-      <div style={{ background: rgb(colorArrays) ?? '' }} className="experience-banner">
+      <div style={{ background: rgb([...cardInfo.backgroundColor]) ?? '' }} className="experience-banner">
         <div className="experience-blurred_div" />
         <div className="experience-div-company">
           <h5 className="experience-text-company">{cardInfo.company}</h5>
@@ -32,7 +25,6 @@ export default function ExperienceCard(cardInfo: WorkExperience) {
           className="experience-roundedimg"
           src={cardInfo.companylogo}
           alt={cardInfo.company}
-          onLoad={() => getColorArrays()}
         />
       </div>
       <div className="experience-text-details">
