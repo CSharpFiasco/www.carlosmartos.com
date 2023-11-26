@@ -4,7 +4,7 @@ export type School = {
   subHeader: string;
   duration: string;
   desc: string;
-  descBullets: string[];
+  descBullets: readonly string[];
 };
 export type EducationInfo = {
   display: boolean;

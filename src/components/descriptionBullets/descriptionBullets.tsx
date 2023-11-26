@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DescriptionBullets({ descBullets }: { descBullets: string[] }) {
+export default function DescriptionBullets({ descBullets }: { descBullets: readonly string[] }) {
   return (
     <>
       {descBullets.map((item, index) => (

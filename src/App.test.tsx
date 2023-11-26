@@ -1,5 +1,7 @@
 import React from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import {
+  describe, expect, it, vi,
+} from 'vitest';
 import { render } from '@testing-library/react';
 import App from './App';
 
@@ -9,7 +11,7 @@ const MockIntersectionObserver = vi.fn(() => ({
   takeRecords: vi.fn(),
   unobserve: vi.fn(),
 }));
-vi.stubGlobal(`IntersectionObserver`, MockIntersectionObserver);
+vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
 
 describe('App', () => {
   it('renders without crashing', () => {

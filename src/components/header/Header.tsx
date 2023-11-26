@@ -19,7 +19,7 @@ function Header(props: Props) {
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" aria-label="Menu button" />
         <label className="menu-icon" htmlFor="menu-btn">
-          <span className="navicon"></span>
+          <span className="navicon" />
         </label>
         {props.children}
       </header>
