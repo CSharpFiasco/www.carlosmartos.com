@@ -173,7 +173,7 @@ const workExperiences = {
         "Product owner for Techsico's code infrastructure",
         'DocuSign integration',
       ],
-      backgroundColor: [20, 52, 11]
+      backgroundColor: [20, 52, 116]
     },
     {
       role: 'Software Developer II',
