@@ -1,7 +1,7 @@
 export type WorkExperience = {
   role: string;
   company: string;
-  companylogo: string;
+  companyLogo: string;
   date: string;
   desc: string;
   descBullets: readonly string[];

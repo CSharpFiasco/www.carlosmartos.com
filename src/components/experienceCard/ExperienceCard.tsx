@@ -23,7 +23,7 @@ export default function ExperienceCard(cardInfo: Readonly<WorkExperience>) {
           crossOrigin="anonymous"
           ref={imgRef}
           className="experience-roundedimg"
-          src={cardInfo.companylogo}
+          src={cardInfo.companyLogo}
           alt={cardInfo.company}
         />
       </div>

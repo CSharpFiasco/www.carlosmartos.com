@@ -19,7 +19,7 @@ export default function WorkExperience() {
                     company={card.company}
                     desc={card.desc}
                     date={card.date}
-                    companylogo={card.companylogo}
+                    companyLogo={card.companyLogo}
                     role={card.role}
                     descBullets={card.descBullets}
                     backgroundColor={card.backgroundColor}

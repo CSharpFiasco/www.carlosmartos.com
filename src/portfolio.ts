@@ -142,7 +142,7 @@ const workExperiences = {
     {
       role: 'Fullstack Developer',
       company: 'Spherexx',
-      companylogo: spherexxLogoUrl,
+      companyLogo: spherexxLogoUrl,
       date: 'September 2017 – August 2020',
       desc: 'Classic ASP/.NET Framework/MSSQL/jQuery',
       descBullets: [
@@ -159,7 +159,7 @@ const workExperiences = {
     {
       role: 'Technical Lead',
       company: 'Techsico',
-      companylogo: techsicoLogoUrl,
+      companyLogo: techsicoLogoUrl,
       date: 'August 2020 – March 2021',
       desc: '.NET Core/MSSQL/ReactJS/Tailwind CSS',
       descBullets: [
@@ -178,7 +178,7 @@ const workExperiences = {
     {
       role: 'Software Developer II',
       company: 'QuikTrip',
-      companylogo: quikTripLogoUrl,
+      companyLogo: quikTripLogoUrl,
       date: 'March 2021 – March 2023',
       desc: '.NET 6/MSSQL/Angular',
       descBullets: [
@@ -198,7 +198,7 @@ const workExperiences = {
     {
       role: 'Software Developer',
       company: 'Hogan Assessments',
-      companylogo: hoganLogo,
+      companyLogo: hoganLogo,
       date: 'March 2023 – Current',
       desc: '.NET 6/CosmosDB/Angular',
       descBullets: [
