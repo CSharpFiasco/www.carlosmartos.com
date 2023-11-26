@@ -3,19 +3,17 @@ import React from 'react';
 import './Button.css';
 
 type ButtonProps = {
+  id: string
   text: string;
-  className: string | null;
   href: string;
   newTab: boolean;
 };
 
-function Button({ className, href, newTab, text }: ButtonProps) {
-  let sanitizedClassName: string | undefined;
-  if (className !== null) { sanitizedClassName = className; }
-
+function Button({ href, newTab, text, id }: ButtonProps) {
   return (
-    <div className={sanitizedClassName}>
+    <div>
       <a
+        id={id}
         className="main-button"
         href={href}
         rel={newTab ? 'noreferrer' : ''}

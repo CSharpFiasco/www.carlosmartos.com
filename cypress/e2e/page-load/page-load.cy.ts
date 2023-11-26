@@ -16,4 +16,16 @@ describe('home page', () => {
       expect($el.position().left).to.be.lessThan(0);
     });
   });
+
+  it('should link to resume', () => {
+    cy.get('#resume-download-button')
+      .should('be.visible')
+      .should('have.attr', 'target', '_blank')
+      .should(($a) => {
+        expect($a.attr('href')).contains('pdf');
+      })
+      .click();
+
+    // cy.location('pathname').should('contain', 'pdf');
+  });
 });

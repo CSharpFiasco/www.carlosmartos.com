@@ -21,5 +21,7 @@ jobs:
             run: npm ci
           - name: Run build
             run: npm run build
-          - name: Run cypress
+          - name: Run cypress on Chrome
             run: npm run cy:test:local
+          - name: Run cypress on Firefox
+            run: npm run cy:test:local:firefox
