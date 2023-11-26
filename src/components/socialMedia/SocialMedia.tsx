@@ -13,8 +13,8 @@ export default function socialMedia() {
           rel="noopener noreferrer"
           aria-label="Github profile"
         >
-          <i className="fab fa-github"></i>
-          <span></span>
+          <i className="fab fa-github" />
+          <span />
         </a>
       ) : null}
 
@@ -26,8 +26,8 @@ export default function socialMedia() {
           rel="noopener noreferrer"
           aria-label="LinkedIn profile"
         >
-          <i className="fab fa-linkedin-in"></i>
-          <span></span>
+          <i className="fab fa-linkedin-in" />
+          <span />
         </a>
       ) : null}
 
@@ -39,8 +39,8 @@ export default function socialMedia() {
           rel="noopener noreferrer"
           aria-label="Gmail"
         >
-          <i className="fab fa-google"></i>
-          <span></span>
+          <i className="fab fa-google" />
+          <span />
         </a>
       ) : null}
 
@@ -52,8 +52,8 @@ export default function socialMedia() {
           rel="noopener noreferrer"
           aria-label="Stack overflow profile"
         >
-          <i className="fab fa-stack-overflow"></i>
-          <span></span>
+          <i className="fab fa-stack-overflow" />
+          <span />
         </a>
       ) : null}
     </div>

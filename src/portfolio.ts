@@ -136,8 +136,8 @@ const educationInfo: EducationInfo = {
 
 // Your top 3 work experiences
 
-const workExperiences: WorkExperienceSection = {
-  viewExperiences: true, //Set it to true to show workExperiences Section
+const workExperiences = {
+  viewExperiences: true, // Set it to true to show workExperiences Section
   experience: [
     {
       role: 'Fullstack Developer',
@@ -209,7 +209,7 @@ const workExperiences: WorkExperienceSection = {
       ],
     },
   ],
-};
+} as const satisfies WorkExperienceSection;
 
 // Your Achievement Section Include Your Certification Talks and More
 
@@ -248,10 +248,10 @@ const contactInfo = {
   email_address: null,
 };
 
-//Twitter Section
+// Twitter Section
 
 const twitterDetails = {
-  userName: 'twitter', //Replace "twitter" with your twitter username without @
+  userName: 'twitter', // Replace "twitter" with your twitter username without @
 };
 export {
   greeting,

@@ -1,24 +1,30 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import './Button.css';
 
 type ButtonProps = {
   text: string;
-  className?: string;
+  className: string | null;
   href: string;
   newTab: boolean;
 };
 
-export default function Button(buttonParam: ButtonProps) {
+function Button({ className, href, newTab, text }: ButtonProps) {
+  let sanitizedClassName: string | undefined;
+  if (className !== null) { sanitizedClassName = className; }
+
   return (
-    <div className={buttonParam.className}>
+    <div className={sanitizedClassName}>
       <a
         className="main-button"
-        href={buttonParam.href}
-        rel={buttonParam.newTab ? 'noreferrer' : ''}
-        target={buttonParam.newTab ? '_blank' : ''}
+        href={href}
+        rel={newTab ? 'noreferrer' : ''}
+        target={newTab ? '_blank' : ''}
       >
-        {buttonParam.text}
+        {text}
       </a>
     </div>
   );
 }
+
+export default Button;

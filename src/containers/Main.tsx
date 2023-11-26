@@ -1,4 +1,7 @@
+/* eslint-disable react/prefer-stateless-function */
+
 import React, { Component } from 'react';
+import Skip from 'src/components/skip/Skip';
 import Header from '../components/header/Header';
 import Greeting from './greeting/Greeting';
 import Skills from './skills/Skills';
@@ -8,9 +11,8 @@ import Footer from '../components/footer/Footer';
 import Top from './topbutton/Top';
 import Education from './education/Education';
 import Menu from './menu/Menu';
-import Skip from 'src/components/skip/Skip';
 
-export default class Main extends Component {
+class Main extends Component {
   override render() {
     return (
       <div>
@@ -29,3 +31,5 @@ export default class Main extends Component {
     );
   }
 }
+
+export default Main;

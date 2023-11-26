@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../components/header/Header';
 import { Fade } from 'react-awesome-reveal';
+import Header from '../components/header/Header';
 import './Testing.css';
 
 export default class Testing extends Component {

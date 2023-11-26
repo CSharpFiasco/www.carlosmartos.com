@@ -4,9 +4,9 @@ export type WorkExperience = {
   companylogo: string;
   date: string;
   desc: string;
-  descBullets: string[];
+  descBullets: readonly string[];
 };
 export type WorkExperienceSection = {
   viewExperiences: boolean;
-  experience: WorkExperience[];
+  experience: readonly WorkExperience[];
 };

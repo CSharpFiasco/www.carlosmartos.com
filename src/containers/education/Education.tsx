@@ -1,8 +1,8 @@
 import React from 'react';
 import './Education.css';
+import { Fade } from 'react-awesome-reveal';
 import EducationCard from '../../components/educationCard/EducationCard';
 import { educationInfo } from '../../portfolio';
-import { Fade } from 'react-awesome-reveal';
 import svg from '../../assets/images/developerActivity.svg';
 
 export default function Education() {
@@ -22,7 +22,7 @@ export default function Education() {
           </Fade>
           <Fade direction="right" duration={1000}>
             <div className="skills-image-div">
-              <img alt="Developer Working" src={svg}></img>
+              <img alt="Developer Working" src={svg} />
             </div>
           </Fade>
         </div>

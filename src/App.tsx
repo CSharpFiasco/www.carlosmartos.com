@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Main from './containers/Main';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Main from './containers/Main';
 import Testing from './containers/Testing';
 
 function App() {

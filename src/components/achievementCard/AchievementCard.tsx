@@ -12,20 +12,18 @@ export default function AchievementCard({ cardInfo }: { cardInfo: AchievementCar
   return (
     <div className="certificate-card">
       <div className="certificate-image-div">
-        <img src={cardInfo.image} alt="PWA" className="card-image"></img>
+        <img src={cardInfo.image} alt="PWA" className="card-image" />
       </div>
       <div className="certificate-detail-div">
         <h5 className="card-title">{cardInfo.title}</h5>
         <p className="card-subtitle">{cardInfo.subtitle}</p>
       </div>
       <div className="certificate-card-footer">
-        {cardInfo.footerLink.map((v, index) => {
-          return (
-            <span key={index} className="certificate-tag" onClick={() => openUrlInNewTab(v.url)}>
-              {v.name}
-            </span>
-          );
-        })}
+        {cardInfo.footerLink.map((v, index) => (
+          <span key={index} className="certificate-tag" onClick={() => openUrlInNewTab(v.url)}>
+            {v.name}
+          </span>
+        ))}
       </div>
     </div>
   );

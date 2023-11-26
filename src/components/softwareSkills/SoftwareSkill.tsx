@@ -8,14 +8,12 @@ export default function SoftwareSkillComponent() {
     <div>
       <div className="software-skills-main-div">
         <ul className="dev-icons">
-          {skillsSection.softwareSkills.map((skills: SoftwareSkill) => {
-            return (
-              <li key={skills.skillName} className="software-skill-inline">
-                <i className={skills.fontAwesomeClassname}></i>
-                <p>{skills.skillName}</p>
-              </li>
-            );
-          })}
+          {skillsSection.softwareSkills.map((skills: SoftwareSkill) => (
+            <li key={skills.skillName} className="software-skill-inline">
+              <i className={skills.fontAwesomeClassname} />
+              <p>{skills.skillName}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

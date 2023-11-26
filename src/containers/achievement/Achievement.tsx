@@ -1,8 +1,8 @@
 import React from 'react';
 import './Achievement.css';
+import { Fade } from 'react-awesome-reveal';
 import AchievementCard from '../../components/achievementCard/AchievementCard';
 import { achievementSection } from '../../portfolio';
-import { Fade } from 'react-awesome-reveal';
 
 export default function Achievement() {
   return (
@@ -14,19 +14,17 @@ export default function Achievement() {
             <p className="subTitle achievement-subtitle">{achievementSection.subtitle}</p>
           </div>
           <div className="achievement-cards-div">
-            {achievementSection.achievementsCards.map((card, index) => {
-              return (
-                <AchievementCard
-                  key={index}
-                  cardInfo={{
-                    title: card.title,
-                    subtitle: card.subtitle,
-                    image: card.image,
-                    footerLink: card.footerLink,
-                  }}
-                />
-              );
-            })}
+            {achievementSection.achievementsCards.map((card, index) => (
+              <AchievementCard
+                key={index}
+                cardInfo={{
+                  title: card.title,
+                  subtitle: card.subtitle,
+                  image: card.image,
+                  footerLink: card.footerLink,
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
