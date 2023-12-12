@@ -5,7 +5,7 @@ export type WorkExperience = {
   date: string;
   desc: string;
   descBullets: readonly string[];
-  backgroundColor: readonly [number, number, number]
+  backgroundColor: readonly [number, number, number];
 };
 export type WorkExperienceSection = {
   viewExperiences: boolean;
