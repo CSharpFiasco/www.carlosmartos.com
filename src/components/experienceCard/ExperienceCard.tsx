@@ -6,7 +6,6 @@ import DescriptionBullets from '../descriptionBullets/descriptionBullets';
 export default function ExperienceCard(cardInfo: Readonly<WorkExperience>) {
   const imgRef = createRef<HTMLImageElement>();
 
-
   function rgb(values?: [number, number, number]) {
     return typeof values === 'undefined' ? null : `rgb(${values.join(', ')})`;
   }

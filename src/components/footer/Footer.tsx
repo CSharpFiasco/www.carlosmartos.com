@@ -8,9 +8,7 @@ export default function Footer() {
       <div className="footer-div">
         <p className="footer-text">Forked from: https://github.com/saadpasta/developerFolio</p>
         <p className="footer-text">
-          Theme by
-          {' '}
-          <a href="https://github.com/saadpasta/developerFolio">developerFolio</a>
+          Theme by <a href="https://github.com/saadpasta/developerFolio">developerFolio</a>
         </p>
       </div>
     </Fade>

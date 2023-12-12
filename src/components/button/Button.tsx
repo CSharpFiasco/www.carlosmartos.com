@@ -3,7 +3,7 @@ import React from 'react';
 import './Button.css';
 
 type ButtonProps = {
-  id: string
+  id: string;
   text: string;
   href: string;
   newTab: boolean;
@@ -12,13 +12,7 @@ type ButtonProps = {
 function Button({ href, newTab, text, id }: ButtonProps) {
   return (
     <div>
-      <a
-        id={id}
-        className="main-button"
-        href={href}
-        rel={newTab ? 'noreferrer' : ''}
-        target={newTab ? '_blank' : ''}
-      >
+      <a id={id} className="main-button" href={href} rel={newTab ? 'noreferrer' : ''} target={newTab ? '_blank' : ''}>
         {text}
       </a>
     </div>

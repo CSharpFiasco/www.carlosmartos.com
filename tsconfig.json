@@ -9,7 +9,7 @@
         "skipLibCheck": true,
         "verbatimModuleSyntax": true,
         "resolveJsonModule": true,
-        
+
         "allowSyntheticDefaultImports": true,
         "strict": true,
         "noImplicitOverride": true,
@@ -23,15 +23,15 @@
         "moduleDetection": "force",
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx",
+        "jsx": "react-jsx"
     },
     "include": ["custom.d.ts", "src"],
 
     // Included until following is fixed: https://github.com/cypress-io/cypress/issues/27731
     "ts-node": {
         "compilerOptions": {
-          "module": "es2015",
-          "moduleResolution": "node"
+            "module": "es2015",
+            "moduleResolution": "node"
         }
-      },
+    }
 }

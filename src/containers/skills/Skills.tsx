@@ -16,9 +16,7 @@ export default function Skills() {
         </Fade>
         <Fade direction="right" duration={1000}>
           <div className="skills-text-div">
-            <h1 className="skills-heading">
-              {skillsSection.title}
-            </h1>
+            <h1 className="skills-heading">{skillsSection.title}</h1>
             <p className="subTitle skills-text-subtitle">{skillsSection.subTitle}</p>
             <SoftwareSkillComponent />
             <div>
