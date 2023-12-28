@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorkExperience from '../components/WorkExperience.astro';
+import Education from '../components/Education.astro';
+---
+
+<Layout title="Carlos Martos Portfolio">
+    <div id="skip">
+      <a href="#greeting">Skip to Main Content</a>
+    </div>
+    <main>
+        <h1 id="greeting">Hi all, I'm <span class="text-gradient">Carlos</span></h1>
+        <Education />
+        <WorkExperience />
+    </main>
+</Layout>
+
+<style>
+    /* Recommended here: https://webaim.org/techniques/css/invisiblecontent/ */
+    #skip a {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    #skip a:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+</style>
