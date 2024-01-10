@@ -1,0 +1,100 @@
+---
+import programmingSvg from '../assets/images/undraw_programming_re_kg9v.svg';
+
+const skillsSection = {
+  title: 'What I do',
+  subTitle: 'DEDICATED FULL STACK DEVELOPER WITH COMPREHENSIVE KNOWLEDGE OF THE WEB DEVELOPMENT PROCESS',
+
+  /* Make Sure You include correct Font Awesome class to view your icon
+  https://fontawesome.com/icons?d=gallery */
+
+  skills: [
+    '⚡ Develop single page applications with Angular and ReactJS',
+    '⚡ ReactJS deployment with Azure Static Web App',
+    '⚡ Relational database design',
+    '⚡ Refactor of legacy web apps to modern .NET API solutions with Angular front-end',
+    '⚡ Unit testing with xUnit and Jasmine',
+    '⚡ Azure DevOps and Github Actions builds and deployments to cloud and on-premise systems',
+  ],
+} as const;
+---
+<div class="main" id="skills">
+    <div class="skills-main-div">
+        <div>
+            <div class="skills-image-div">
+                <img alt="Developer Working" src={programmingSvg.src} />
+            </div>
+        </div>
+        <div>
+            <div class="skills-text-div">
+                <h1 class="skills-heading">{skillsSection.title}</h1>
+                <p class="subTitle skills-text-subtitle">{skillsSection.subTitle}</p>
+                <div>
+                {skillsSection.skills.map((skills) => (
+                    <p class="subTitle skills-text">
+                    {skills}
+                    </p>
+                ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .skills-main-div {
+    display: flex;
+    }
+    .skills-text-div {
+    margin-left: 50px;
+    }
+
+    .skills-main-div > * {
+    flex: 1;
+    margin-bottom: 30px;
+    }
+
+    .skills-image-div > img {
+    max-width: 100%;
+    height: auto;
+    }
+
+    .skills-heading {
+    font-size: 56px;
+    font-weight: 400;
+    }
+
+    /* Media Query */
+    @media (max-width: 1380px) {
+    .skills-heading {
+        font-size: 40px;
+    }
+    }
+    @media (max-width: 768px) {
+    .skills-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+    .greeting-text-p {
+        font-size: 16px;
+        line-height: normal;
+    }
+    .skills-main-div {
+        flex-direction: column
+    }
+    .skills-text-div {
+        margin-left: 0px;
+        margin: 20px;
+    }
+    .skills-text {
+        font-size: 16px;
+    }
+    .skills-text-subtitle {
+        font-size: 16px;
+        text-align: center;
+    }
+    .skills-image-div {
+        /* display: none; */
+        order: 2;
+    }
+    }
+</style>

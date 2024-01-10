@@ -1,0 +1,74 @@
+---
+import AchievementCard from "./AchievementCard.astro";
+import BookSvg from "../assets/images/undraw_books_re_8gea.svg";
+
+const achievementSection = {
+  title: "Achievements And Publications",
+  subtitle: null,
+
+  achievementsCards: [
+    {
+      title: "Reuse of variants in online repositories: Foraging for the fittest",
+      subtitle: "Publication: 2016 IEEE Symposium on Visual Languages and Human-Centric Computing",
+      image: BookSvg.src,
+      footerLink: [
+        {
+          name: "IEEE Publication",
+          url: "https://ieeexplore.ieee.org/document/7739674",
+        },
+      ],
+    },
+  ],
+} as const;
+---
+
+<div class="main" id="achievements">
+  <div class="achievement-main-div">
+    <div class="achievement-header">
+      <h1 class="heading achievement-heading">{achievementSection.title}</h1>
+      <p class="subTitle achievement-subtitle">{achievementSection.subtitle}</p>
+    </div>
+    <div class="achievement-cards-div">
+      {
+        achievementSection.achievementsCards.map((card) => (
+          <AchievementCard
+            title={card.title}
+            subtitle={card.subtitle}
+            image={card.image}
+            footerLink={card.footerLink}
+          />
+        ))
+      }
+    </div>
+  </div>
+</div>
+<style>
+  .achievement-heading {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+  }
+  .achievement-subtitle {
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+  /* Media Query */
+  @media (max-width: 1380px) {
+    .achievement-heading {
+      font-size: 40px;
+    }
+  }
+  @media (max-width: 768px) {
+    .achievement-heading {
+      font-size: 30px;
+      text-align: center;
+    }
+    .achievement-subtitle {
+      font-size: 16px;
+      line-height: normal;
+      text-align: center;
+    }
+  }
+</style>

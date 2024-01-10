@@ -1,37 +1,3 @@
 {
-    "compilerOptions": {
-        "target": "ES2022",
-        "lib": ["dom", "dom.iterable", "ES2022"],
-        "types": ["vite/client", "vite-plugin-svgr/client"],
-        "baseUrl": ".",
-        "allowJs": false,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "verbatimModuleSyntax": true,
-        "resolveJsonModule": true,
-
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "noImplicitOverride": true,
-        "forceConsistentCasingInFileNames": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitReturns": true,
-        "noUncheckedIndexedAccess": true,
-
-        "module": "ES2022",
-        "moduleResolution": "Bundler",
-        "moduleDetection": "force",
-        "isolatedModules": true,
-        "noEmit": true,
-        "jsx": "react-jsx"
-    },
-    "include": ["custom.d.ts", "src"],
-
-    // Included until following is fixed: https://github.com/cypress-io/cypress/issues/27731
-    "ts-node": {
-        "compilerOptions": {
-            "module": "es2015",
-            "moduleResolution": "node"
-        }
-    }
+  "extends": "astro/tsconfigs/strictest"
 }

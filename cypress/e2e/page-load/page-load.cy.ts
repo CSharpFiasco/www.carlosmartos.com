@@ -10,7 +10,7 @@ describe('home page', () => {
   });
 
   it('should have expected elements', () => {
-    cy.get('.greeting-text').should('contain.text', 'Carlos');
+    cy.get('#greeting').should('contain.text', 'Carlos');
 
     cy.get('#skip a').then(($el) => {
       expect($el.position().left).to.be.lessThan(0);
@@ -25,7 +25,5 @@ describe('home page', () => {
         expect($a.attr('href')).contains('pdf');
       })
       .click();
-
-    // cy.location('pathname').should('contain', 'pdf');
   });
 });
