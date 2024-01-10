@@ -35,10 +35,23 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		--primary-bg: #fff;
+		--primary-text: #13151a;
+		--secondary-bg: #13151a;
+		--secondary-text: #fff;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--primary-bg: #13151a;
+			--primary-text: #fff;
+			--secondary-bg: #fff;
+			--secondary-text: #13151a;
+		}
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: var(--primary-bg);
 		background-size: 224px;
 	}
 	code {

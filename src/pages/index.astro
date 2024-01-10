@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import WorkExperience from '../components/WorkExperience.astro';
 import Education from '../components/Education.astro';
+import Skills from '../components/Skills.astro';
+import Greeting from '../components/Greeting.astro';
+import Achievement from '../components/Achievement.astro';
 ---
 
 <Layout title="Carlos Martos Portfolio">
@@ -9,9 +12,11 @@ import Education from '../components/Education.astro';
       <a href="#greeting">Skip to Main Content</a>
     </div>
     <main>
-        <h1 id="greeting">Hi all, I'm <span class="text-gradient">Carlos</span></h1>
+        <Greeting />
+        <Skills />
         <Education />
         <WorkExperience />
+        <Achievement />
     </main>
 </Layout>
 
@@ -34,9 +39,9 @@ import Education from '../components/Education.astro';
     main {
         margin: auto;
         padding: 1rem;
-        width: 800px;
+        width: 960px;
         max-width: calc(100% - 2rem);
-        color: white;
+        color: var(--primary-text);
         font-size: 1.25rem;
         line-height: 1.6;
     }
@@ -46,12 +51,5 @@ import Education from '../components/Education.astro';
         line-height: 1;
         text-align: center;
         margin-bottom: 1em;
-    }
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
     }
 </style>

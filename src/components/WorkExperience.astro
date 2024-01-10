@@ -6,40 +6,21 @@ import hoganLogo from '../assets/images/hogan-logo.svg';
 
 const workExperiences = [
       {
-        role: 'Fullstack Developer',
-        company: 'Spherexx',
-        companyLogo: spherexxLogo,
-        date: 'September 2017 – August 2020',
-        desc: 'Classic ASP/.NET Framework/MSSQL/jQuery',
+        role: 'Software Developer',
+        company: 'Hogan Assessments',
+        companyLogo: hoganLogo,
+        date: 'March 2023 – Current',
+        desc: '.NET 6/CosmosDB/Angular',
         descBullets: [
-          'Custom site builds for property management companies',
-          'Content management systems in Classic ASP and ASP.NET',
-          'Dashboards in .NET Framework with Vue frontend',
-          'Maintained multi-company beer distribution systems',
-          'Developer and Project Lead',
-          'Moved projects to version control (TFS)',
-          "Payment gateway with Square's Payment API",
+          'RxJS',
+          'Redux (NgRx)',
+          'Unit Tests (Jasmine/xUnit)',
+          'E2E Tests (Cypress/Playwright)',
+          'API development',
+          'Swagger (Swashbuckle)',
+          'Azure DevOps',
         ],
-        backgroundColor: [4, 12, 36],
-      },
-      {
-        role: 'Technical Lead',
-        company: 'Techsico',
-        companyLogo: techsicoLogo,
-        date: 'August 2020 – March 2021',
-        desc: '.NET Core/MSSQL/ReactJS/Tailwind CSS',
-        descBullets: [
-          'Head of Web Development',
-          'Maintained legacy internal management VB.NET system',
-          'Train junior developers in ReactJS and .NET Core',
-          'Maintained policies for AWS IAM',
-          'Managed public DNS names to load balancers via Route53',
-          'Maintained .NET Core API',
-          'Managed relational database including architecture and security',
-          "Product owner for Techsico's code infrastructure",
-          'DocuSign integration',
-        ],
-        backgroundColor: [20, 52, 116],
+        backgroundColor: [4, 4, 4],
       },
       {
         role: 'Software Developer II',
@@ -62,21 +43,40 @@ const workExperiences = [
         backgroundColor: [9, 6, 6],
       },
       {
-        role: 'Software Developer',
-        company: 'Hogan Assessments',
-        companyLogo: hoganLogo,
-        date: 'March 2023 – Current',
-        desc: '.NET 6/CosmosDB/Angular',
+        role: 'Technical Lead',
+        company: 'Techsico',
+        companyLogo: techsicoLogo,
+        date: 'August 2020 – March 2021',
+        desc: '.NET Core/MSSQL/ReactJS/Tailwind CSS',
         descBullets: [
-          'RxJS',
-          'Redux (NgRx)',
-          'Unit Tests (Jasmine/xUnit)',
-          'E2E Tests (Cypress/Playwright)',
-          'API development',
-          'Swagger (Swashbuckle)',
-          'Azure DevOps',
+          'Head of Web Development',
+          'Maintained legacy internal management VB.NET system',
+          'Train junior developers in ReactJS and .NET Core',
+          'Maintained policies for AWS IAM',
+          'Managed public DNS names to load balancers via Route53',
+          'Maintained .NET Core API',
+          'Managed relational database including architecture and security',
+          "Product owner for Techsico's code infrastructure",
+          'DocuSign integration',
         ],
-        backgroundColor: [4, 4, 4],
+        backgroundColor: [20, 52, 116],
+      },
+      {
+        role: 'Fullstack Developer',
+        company: 'Spherexx',
+        companyLogo: spherexxLogo,
+        date: 'September 2017 – August 2020',
+        desc: 'Classic ASP/.NET Framework/MSSQL/jQuery',
+        descBullets: [
+          'Custom site builds for property management companies',
+          'Content management systems in Classic ASP and ASP.NET',
+          'Dashboards in .NET Framework with Vue frontend',
+          'Maintained multi-company beer distribution systems',
+          'Developer and Project Lead',
+          'Moved projects to version control (TFS)',
+          "Payment gateway with Square's Payment API",
+        ],
+        backgroundColor: [4, 12, 36],
       },
 ] as const;
 
@@ -169,7 +169,7 @@ type WorkExperience = typeof workExperiences[number];
 /* start card */
 .experience-card {
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary-bg);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
     border-radius: 10px;
     border: 1px solid rgba(211, 211, 211, 0.397);
@@ -227,6 +227,7 @@ type WorkExperience = typeof workExperiences[number];
     text-align: center;
     padding: 1.5rem;
     margin: 0;
+    /* todo: this color should contrast against company background color */
     color: #fff;
     font-size: 1.5625rem;
     text-align: center;
@@ -253,7 +254,7 @@ type WorkExperience = typeof workExperiences[number];
 
 .experience-text-role {
     text-align: center;
-    color: black;
+    color: var(--primary-text);
     font-weight: 700;
     font-size: 1.5625rem;
     margin: 0px;
@@ -262,12 +263,12 @@ type WorkExperience = typeof workExperiences[number];
 }
 
 .experience-text-desc, .subTitle {
-    color: black;
+    color: var(--primary-text);
 }
 
 .experience-text-date {
     text-align: center;
-    color: black;
+    color: var(--primary-text);
     font-size: 1.25rem;
     margin: 0px;
     padding-top: 1rem;

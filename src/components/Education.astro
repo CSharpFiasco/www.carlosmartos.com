@@ -1,6 +1,7 @@
 ---
 import EducationCard from './EducationCard.astro';
 import universityOfTulsaUrl from '../assets/images/UniversityOfTulsa.png';
+import developerActivitySvg from '../assets/images/undraw_developer_activity_re_39tg.svg';
 
 const educationInfo = [
     {
@@ -23,7 +24,7 @@ const educationInfo = [
 <div class="main" id="education">
     <div class="education-main-div">
         <div>
-            <div class="education-section education-text-div" id="education">
+            <div class="education-section education-text-div">
                 <h1 class="education-heading">Education</h1>
                 <div class="education-card-container">
                 {educationInfo.map((school) => (
@@ -40,9 +41,8 @@ const educationInfo = [
             </div>
         </div>
         <div>
-            <div class="skills-image-div">
-                <!-- <img alt="Developer Working" src={svg} /> -->
-                image goes here
+            <div class="education-image-div">
+                <img alt="Developer Working" src={developerActivitySvg.src} />
             </div>
         </div>
     </div>
@@ -75,6 +75,7 @@ const educationInfo = [
         display: flex;
         flex-direction: column;
         /* width: 90%; */
+        max-width: 100%;
         padding: 0;
     }
 
