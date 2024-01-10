@@ -91,7 +91,7 @@ type WorkExperience = typeof workExperiences[number];
         <div>
           <h1 class="experience-heading">Experiences</h1>
           <div class="experience-cards-div">
-            {workExperiences.map((card: WorkExperience, _index: number) => (
+            {workExperiences.map((card: WorkExperience) => (
                 <div class="experience-card">
                 <div style={{ background: rgb([...card.backgroundColor]) ?? '' }} class="experience-banner">
                     <div class="experience-blurred_div" />
@@ -112,7 +112,7 @@ type WorkExperience = typeof workExperiences[number];
                     <p class="subTitle experience-text-desc">{card.desc}</p>
                     <ul>
                     {
-                        card.descBullets.map((descBullet: string, _index: number) => (
+                        card.descBullets.map((descBullet: string) => (
                         <li  class="subTitle">
                             {descBullet}
                         </li>
