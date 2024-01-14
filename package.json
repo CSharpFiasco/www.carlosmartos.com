@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
-    "astro": "^4.0.7",
+    "astro": "^4.1.1",
     "eslint-plugin-import": "^2.29.1",
     "typescript": "^5.3.3"
   },
