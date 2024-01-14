@@ -90,7 +90,7 @@ type WorkExperience = (typeof workExperiences)[number];
 <div id="experience">
   <div class="experience-container" id="workExperience">
     <div>
-      <h1 class="experience-heading">Experiences</h1>
+      <h2 class="experience-heading">Experiences</h2>
       <div class="experience-cards-div">
         {
           workExperiences.map((card: WorkExperience) => (
@@ -133,14 +133,13 @@ type WorkExperience = (typeof workExperiences)[number];
   }
 
   .experience-heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 400;
   }
 
   .experience-container {
     display: flex;
     margin: 0px auto;
-    margin-top: 2rem;
   }
 
   .experience-container > * {

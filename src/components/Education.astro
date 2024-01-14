@@ -25,7 +25,7 @@ const educationInfo = [
   <div class="education-main-div">
     <div>
       <div class="education-section education-text-div">
-        <h1 class="education-heading">Education</h1>
+        <h2 class="education-heading">Education</h2>
         <div class="education-card-container">
           {
             educationInfo.map((school) => (
@@ -56,7 +56,6 @@ const educationInfo = [
 
   .education-main-div > * {
     flex: 1;
-    margin-bottom: 30px;
   }
 
   .education-image-div > img {
@@ -65,7 +64,7 @@ const educationInfo = [
   }
 
   .education-heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 400;
   }
 
@@ -79,20 +78,14 @@ const educationInfo = [
 
   .education-section > * {
     flex: 1;
-    margin-bottom: 30px;
   }
 
   .education-card-container {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
   }
 
   @media (max-width: 1380px) {
-    /* .education-card-container {
-      padding-top: 0 1.5rem 1.5rem 1.5rem;
-    } */
-
     .education-heading {
       font-size: 2.5rem;
     }
@@ -114,10 +107,6 @@ const educationInfo = [
     .education-text-div {
       margin: 0;
     }
-
-    /* .education-card-container {
-      padding: 0 1.5rem 1.5rem 1.5rem;
-    } */
 
     .education-heading {
       font-size: 1.875rem;
