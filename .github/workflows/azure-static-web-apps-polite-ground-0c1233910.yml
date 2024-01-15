@@ -32,6 +32,7 @@ jobs:
           skip_api_build: true
           ###### End of Repository/Build Configurations ######
         env:
+          # https://github.com/microsoft/Oryx/blob/main/doc/configuration.md
           CUSTOM_BUILD_COMMAND: npm ci && npm run build
 
   close_pull_request_job:
