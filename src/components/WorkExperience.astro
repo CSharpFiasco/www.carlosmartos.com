@@ -125,9 +125,10 @@ type WorkExperience = (typeof workExperiences)[number];
     </div>
   </div>
 </div>
-<style>
+<style lang="scss">
+  @use '../styles/variables.scss' as global;
   .main {
-    margin-top: var(--section-margin-top);
+    margin-top: global.$section-margin-top;
   }
   .experience-cards-div {
     display: grid;

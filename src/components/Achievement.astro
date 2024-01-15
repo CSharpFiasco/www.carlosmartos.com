@@ -21,7 +21,7 @@ const achievementSection = {
 } as const;
 ---
 
-<div class="main" id="achievements">
+<section class="main" id="achievements">
   <div class="achievement-main-div">
     <div class="achievement-header">
       <h2 class="heading achievement-heading">{achievementSection.title}</h2>
@@ -39,10 +39,11 @@ const achievementSection = {
       }
     </div>
   </div>
-</div>
-<style>
+</section>
+<style lang="scss">
+  @use '../styles/variables.scss' as global;
   .main {
-    margin-top: var(--section-margin-top);
+    margin-top: global.$section-margin-top;
   }
   .achievement-heading {
     font-size: var(--heading-size);

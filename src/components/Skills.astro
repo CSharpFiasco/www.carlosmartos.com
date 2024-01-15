@@ -40,9 +40,10 @@ const skillsSection = {
     {skillsSection.skills.map((skills) => <p class="skills-text">{skills}</p>)}
   </div>
 </div>
-<style>
+<style lang="scss">
+  @use '../styles/variables.scss' as global;
   .main {
-    margin-top: var(--section-margin-top);
+    margin-top: global.$section-margin-top;
   }
   .skills-main-div {
     display: flex;
