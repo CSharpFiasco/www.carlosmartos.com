@@ -32,8 +32,7 @@ jobs:
           skip_api_build: true
           ###### End of Repository/Build Configurations ######
         env:
-          CUSTOM_BUILD_COMMAND: npm ci
-          RUN_BUILD_COMMAND: npm run build
+          CUSTOM_BUILD_COMMAND: npm ci && npm run build
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
