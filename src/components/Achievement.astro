@@ -4,7 +4,6 @@ import BookSvg from '../assets/images/undraw_books_re_8gea.svg';
 
 const achievementSection = {
   title: 'Achievements And Publications',
-  subtitle: null,
 
   achievementsCards: [
     {
@@ -21,12 +20,10 @@ const achievementSection = {
   ],
 } as const;
 ---
-
 <div class="main" id="achievements">
   <div class="achievement-main-div">
     <div class="achievement-header">
       <h2 class="heading achievement-heading">{achievementSection.title}</h2>
-      <p class="subTitle achievement-subtitle">{achievementSection.subtitle}</p>
     </div>
     <div class="achievement-cards-div">
       {
@@ -43,10 +40,11 @@ const achievementSection = {
   </div>
 </div>
 <style>
+  .main { margin-top: var(--section-margin-top); }
   .achievement-heading {
-    font-size: 3rem;
+    font-size: var(--heading-size);
+    line-height: var(--line-height);
     font-weight: 400;
-    line-height: normal;
   }
   .achievement-subtitle {
     text-transform: uppercase;

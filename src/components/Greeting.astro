@@ -1,51 +1,40 @@
 ---
 import resume from '../assets/resume/Carlos_Martos_Resume_20230111.pdf';
 import sittingOnTableSvg from '../assets/images/undraw_on_the_office_re_cxds.svg';
-
-const greeting = {
-  /* Your Summary And Greeting Section */
-  subTitle:
-    'A passionate Software Developer with experience building web applications with .NET, SQL Server and Angular',
-  resumeLink: resume,
-} as const;
 ---
-
-<div class="greet-main" id="greeting">
-  <div class="greeting-main">
-    <div class="greeting-text-div">
-      <div>
-        <h1>Hi all, I'm <span class="nowrap"><span class="text-gradient">Carlos</span> 👋</span></h1>
-        <p class="greeting-text-p subTitle">{greeting.subTitle}</p>
-        <!-- <SocialMedia /> -->
-        <div class="button-greeting-div">
-          <div>
-            <a
-              id="resume-download-button"
-              class="main-button"
-              href={greeting.resumeLink}
-              rel="noreferrer"
-              target="_blank"
-            >
-              See my resume
-            </a>
-          </div>
+<section class="main greeting-main" id="greeting">
+  <div class="greeting-text-div">
+    <div>
+      <h1>Hi all, I'm <span class="nowrap"><span class="text-gradient">Carlos</span> 👋</span></h1>
+      <p class="greeting-text-p subTitle">
+        A passionate software developer with experience building web applications with .NET, SQL Server and Angular
+      </p>
+      <!-- <SocialMedia /> -->
+      <div class="button-greeting-div">
+        <div>
+          <a
+            id="resume-download-button"
+            class="main-button"
+            href={resume}
+            rel="noreferrer"
+            target="_blank"
+          >
+            See my resume
+          </a>
         </div>
       </div>
     </div>
-    <div class="greeting-image-div">
-      <img alt="Developer sitting on table" src={sittingOnTableSvg.src} />
-    </div>
   </div>
-</div>
+  <div class="greeting-image-div">
+    <img alt="Developer sitting on table" src={sittingOnTableSvg.src} />
+  </div>
+</section>
 <style>
-  .greet-main {
-    margin: 0px auto;
-    margin-top: 2rem;
-  }
-
   h1 {
-    font-size: 3rem;
+    font-size: var(--heading-size);
+    line-height: var(--line-height);
     font-weight: 700;
+    text-align: center;
   }
 
   .nowrap {
@@ -54,26 +43,22 @@ const greeting = {
 
   .greeting-main {
     display: flex;
+    flex-direction: column;
     gap: 50px;
   }
 
   .greeting-main > * {
     flex: 1;
-    margin-bottom: 30px;
   }
   .button-greeting-div {
     display: flex;
-    margin-top: 20px;
-  }
-
-  .greeting-text {
-    font-size: 4.375rem;
+    justify-content: space-around;
   }
 
   .greeting-text-p {
-    font-size: 1.875rem;
-    line-height: 2.5rem;
-    margin: auto;
+    font-size: var(--paragraph-size);
+    line-height: var(--line-height);
+    text-align: center;
   }
 
   .greeting-image-div > img {
@@ -113,79 +98,19 @@ const greeting = {
     transform: translateY(-3px);
   }
 
-  @keyframes wave {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(-10deg);
-    }
-    20% {
-      transform: rotate(12deg);
-    }
-    30% {
-      transform: rotate(-10deg);
-    }
-    40% {
-      transform: rotate(9deg);
-    }
-    50% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-
   /* Media Query */
-  @media (max-width: 1380px) {
-    h1 {
-      font-size: 3.5rem;
+  @media (min-width: 768px) {
+    .greeting-main {
+      flex-direction: row;
     }
-    .greeting-text {
-      font-size: 3.125rem;
+    h1 {
+      text-align: left;
     }
     .greeting-text-p {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-    }
-  }
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.5rem;
+      text-align: left;
     }
     .button-greeting-div {
-      justify-content: space-around;
-    }
-    .greeting-text {
-      font-size: 1.875rem;
-      text-align: center;
-    }
-    .greeting-text-p {
-      font-size: 1rem;
-      text-align: center;
-    }
-    .greeting-main {
-      display: block;
-    }
-  }
-
-  /* Media Query Main Button */
-  @media (max-width: 768px) {
-    .main-button {
-      font-size: .9375rem;
-      padding: 12px 18px;
-      margin-right: 0px;
-    }
-
-    .greeting-text-p {
-      width: 32rem;
-      max-width: 100%;
-    }
-  }
-  @media (max-width: 320px) {
-    .main-button {
-      font-size: .75rem;
+      justify-content: start;
     }
   }
 </style>

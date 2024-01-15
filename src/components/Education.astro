@@ -9,22 +9,20 @@ const educationInfo = [
     logo: universityOfTulsaUrl,
     subHeader: 'Bachelor of Science Computer Science',
     duration: 'September 2013 - May 2017',
-    desc: 'Proud graduate of the University of Tulsa',
     descBullets: [
-      'Data Structures',
-      'Database Systems',
-      'Comparative Programming Languages',
-      'Operating Systems',
-      'Linear Algebra and Matrix Theory',
+      '⚡Data Structures',
+      '⚡Database Systems',
+      '⚡Comparative Programming Languages',
+      '⚡Operating Systems',
+      '⚡Linear Algebra and Matrix Theory',
     ],
   },
 ] as const;
 ---
-
 <div class="main" id="education">
   <div class="education-main-div">
     <div>
-      <div class="education-section education-text-div">
+      <div class="education-section">
         <h2 class="education-heading">Education</h2>
         <div class="education-card-container">
           {
@@ -32,9 +30,8 @@ const educationInfo = [
               <EducationCard
                 schoolName={school.schoolName}
                 logoUrl={school.logo.src}
-                subHeader={school.subHeader}
+                degree={school.subHeader}
                 duration={school.duration}
-                desc={school.desc}
                 descBullets={school.descBullets}
               />
             ))
@@ -50,8 +47,10 @@ const educationInfo = [
   </div>
 </div>
 <style>
+  .main { margin-top: var(--section-margin-top); }
   .education-main-div {
     display: flex;
+    flex-direction: column;
   }
 
   .education-main-div > * {
@@ -64,16 +63,16 @@ const educationInfo = [
   }
 
   .education-heading {
-    font-size: 3rem;
+    font-size: var(--heading-size);
+    line-height: var(--line-height);
     font-weight: 400;
+    text-align: center;
   }
 
   .education-section {
     display: flex;
     flex-direction: column;
-    /* width: 90%; */
     max-width: 100%;
-    padding: 0;
   }
 
   .education-section > * {
@@ -85,36 +84,14 @@ const educationInfo = [
     flex-direction: column;
   }
 
-  @media (max-width: 1380px) {
-    .education-heading {
-      font-size: 2.5rem;
-    }
-
-    .education-text-subtitle {
-      font-size: 1.125rem;
-      text-align: center;
-    }
-
-    .education-section {
-      padding: 0;
-    }
-  }
-
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .education-main-div {
-      flex-direction: column;
-    }
-    .education-text-div {
-      margin: 0;
+      flex-direction: row;
     }
 
     .education-heading {
-      font-size: 1.875rem;
-      text-align: center;
-    }
-
-    .education-text-subtitle {
-      font-size: 1rem;
+      text-align: left;
     }
   }
+
 </style>

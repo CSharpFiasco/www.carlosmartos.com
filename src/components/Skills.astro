@@ -31,17 +31,19 @@ const skillsSection = {
     <div>
       <div class="skills-text-div">
         <h2 class="skills-heading">{skillsSection.title}</h2>
-        <p class="subTitle skills-text-subtitle">{skillsSection.subTitle}</p>
+        <p class="skills-text-subtitle">{skillsSection.subTitle}</p>
       </div>
     </div>
   </div>
   <div>
-    {skillsSection.skills.map((skills) => <p class="subTitle skills-text">{skills}</p>)}
+    {skillsSection.skills.map((skills) => <p class="skills-text">{skills}</p>)}
   </div>
 </div>
 <style>
+  .main { margin-top: var(--section-margin-top); }
   .skills-main-div {
     display: flex;
+    flex-direction: column-reverse;
     gap: 50px;
   }
 
@@ -56,42 +58,30 @@ const skillsSection = {
   }
 
   .skills-heading {
-    font-size: 3rem;
+    font-size: var(--heading-size);
+    line-height: var(--line-height);
     font-weight: 400;
+    text-align: center;
+  }
+
+  .skills-text-subtitle {
+    font-size: var(--paragraph-size);
+    line-height: var(--line-height);
+    text-align: center;
+  }
+
+  .skills-text {
+    font-size: var(--paragraph-size);
+    line-height: var(--line-height);
   }
 
   /* Media Query */
-  @media (max-width: 1380px) {
-    .skills-heading {
-      font-size: 2.5rem;
-    }
-  }
-  @media (max-width: 768px) {
-    .skills-heading {
-      font-size: 1.875rem;
-      text-align: center;
-    }
-    .greeting-text-p {
-      font-size: 1rem;
-      line-height: normal;
+  @media (min-width: 768px) {
+    .skills-heading, .skills-text-subtitle {
+      text-align: left;
     }
     .skills-main-div {
-      flex-direction: column-reverse;
-    }
-    .skills-text-div {
-      /* margin-left: 0px; */
-      /* margin: 20px; */
-    }
-    .skills-text {
-      font-size: 1rem;
-    }
-    .skills-text-subtitle {
-      font-size: 1rem;
-      text-align: center;
-    }
-    .skills-image-div {
-      /* display: none; */
-      order: 2;
+      flex-direction: row;
     }
   }
 </style>

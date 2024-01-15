@@ -87,7 +87,7 @@ function rgb(values: readonly [number, number, number]) {
 type WorkExperience = (typeof workExperiences)[number];
 ---
 
-<div id="experience">
+<div class="main" id="experience">
   <div class="experience-container" id="workExperience">
     <div>
       <h2 class="experience-heading">Experiences</h2>
@@ -126,15 +126,18 @@ type WorkExperience = (typeof workExperiences)[number];
   </div>
 </div>
 <style>
+  .main { margin-top: var(--section-margin-top); }
   .experience-cards-div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1rem 1rem;
   }
 
   .experience-heading {
-    font-size: 3rem;
+    font-size: var(--heading-size);
+    line-height: var(--line-height);
     font-weight: 400;
+    text-align: center;
   }
 
   .experience-container {
@@ -148,19 +151,13 @@ type WorkExperience = (typeof workExperiences)[number];
 
   /* Media Query */
 
-  @media (max-width: 1380px) {
-    .experience-heading {
-      font-size: 2.5rem;
-    }
-  }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .experience-heading {
-      font-size: 1.875rem;
-      text-align: center;
+      text-align: left;
     }
     .experience-cards-div {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     }
   }
 

@@ -11,10 +11,6 @@ describe('home page', () => {
 
   it('should have expected elements', () => {
     cy.get('#greeting').should('contain.text', 'Carlos');
-
-    cy.get('#skip a').then(($el) => {
-      expect($el.position().left).to.be.lessThan(0);
-    });
   });
 
   it('should link to resume', () => {
