@@ -1,4 +1,5 @@
 ---
+import universityOfTulsaLogo from '../assets/images/the-university-of-tulsa.svg';
 import spherexxLogo from '../assets/images/SpherexxLogo.webp';
 import techsicoLogo from '../assets/images/techsico-logo.svg';
 import quikTripLogo from '../assets/images/quiktrip-logo.svg';
@@ -78,6 +79,18 @@ const workExperiences = [
     ],
     backgroundColor: [4, 12, 36],
   },
+  {
+    role: 'Student Researcher',
+    company: 'University of Tulsa',
+    companyLogo: universityOfTulsaLogo,
+    date: 'September 2015 – April 2016',
+    desc: 'Classic ASP/.NET Framework/MSSQL/jQuery',
+    descBullets: [
+      'Research involved utilizing information foraging techniques to better understand how to improve human-information interaction in source code repositories by MATLAB and App Inventor',
+      'Published in the 2016 IEEE Symposium on Visual Languages and Human-Centric Computing',
+    ],
+    backgroundColor: [4, 12, 36],
+  },
 ] as const;
 
 function rgb(values: readonly [number, number, number]) {
@@ -98,7 +111,7 @@ type WorkExperience = (typeof workExperiences)[number];
               <div style={{ background: rgb([...card.backgroundColor]) ?? '' }} class="experience-banner">
                 <div class="experience-blurred_div" />
                 <div class="experience-div-company">
-                  <h5 class="experience-text-company">{card.company}</h5>
+                  <h4 class="experience-text-company">{card.company}</h4>
                 </div>
 
                 <img
@@ -109,7 +122,7 @@ type WorkExperience = (typeof workExperiences)[number];
                 />
               </div>
               <div class="experience-text-details">
-                <h5 class="experience-text-role">{card.role}</h5>
+                <h4 class="experience-text-role">{card.role}</h4>
                 <h5 class="experience-text-date">{card.date}</h5>
                 <p class="subTitle experience-text-desc">{card.desc}</p>
                 <ul>

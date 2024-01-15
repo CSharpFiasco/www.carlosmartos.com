@@ -1,13 +1,14 @@
 ---
 interface Props {
   schoolName: string;
+  schoolUrl: string;
   degree: string;
   logoUrl: string;
   duration: string;
   descBullets: readonly string[];
 }
 
-const { schoolName, degree, logoUrl, duration, descBullets } = Astro.props;
+const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.props;
 ---
 
 <div>
@@ -16,7 +17,7 @@ const { schoolName, degree, logoUrl, duration, descBullets } = Astro.props;
       <img crossorigin="anonymous" class="education-roundedimg" src={logoUrl} alt={schoolName} />
     </div>
     <div class="education-card-right">
-      <h3 class="education-text-school">{schoolName}</h3>
+      <h3 class="education-text-school"><a class="education-school-link" href={schoolUrl} target="_blank">{schoolName}</a></h3>
 
       <div class="education-text-details">
         <p class="education-text-degree">{degree}</p>
@@ -54,6 +55,15 @@ const { schoolName, degree, logoUrl, duration, descBullets } = Astro.props;
     overflow: hidden;
     white-space: nowrap;
     text-align: center;
+  }
+
+  .education-school-link {
+    color: var(--primary-text);
+    text-decoration: none;
+  }
+
+  .education-school-link:hover {
+    text-decoration: underline;
   }
 
   .education-text-details {
@@ -107,10 +117,6 @@ const { schoolName, degree, logoUrl, duration, descBullets } = Astro.props;
   @media (min-width: 1380px) {
     .education-card {
       flex-direction: column;
-    }
-    .education-roundedimg {
-      width: 4rem;
-      height: 4rem;
     }
   }
 </style>

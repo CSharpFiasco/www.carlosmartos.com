@@ -22,4 +22,15 @@ describe('home page', () => {
       })
       .click();
   });
+
+  it('should have valid links', () => {
+    cy.get('a').each(($a) => {
+      const href = $a.prop('href');
+      // cy.task("log", href);
+
+      if (href) {
+        cy.request(href).its('status').should('eq', 200);
+      }
+    });
+  });
 });

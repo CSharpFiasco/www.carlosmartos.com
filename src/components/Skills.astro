@@ -2,10 +2,6 @@
 import programmingSvg from '../assets/images/undraw_programming_re_kg9v.svg';
 
 const skillsSection = {
-  title: 'What I do',
-  subTitle:
-    'I am a software developer with 7+ years of experience in developing web applications, desktop applications, background services, ETLs and designing databases.',
-
   /* Make Sure You include correct Font Awesome class to view your icon
   https://fontawesome.com/icons?d=gallery */
 
@@ -22,7 +18,7 @@ const skillsSection = {
 } as const;
 ---
 
-<div class="main" id="skills">
+<section class="main" id="skills">
   <div class="skills-main-div">
     <div>
       <div class="skills-image-div">
@@ -31,15 +27,15 @@ const skillsSection = {
     </div>
     <div>
       <div class="skills-text-div">
-        <h2 class="skills-heading">{skillsSection.title}</h2>
-        <p class="skills-text-subtitle">{skillsSection.subTitle}</p>
+        <h2 class="skills-heading">What I do</h2>
+        <p class="skills-text-subtitle">With over 7 years of experience as a software developer, I have a strong background in creating applications, including desktop applications, background services, and ETLs. Additionally, I excel in the design of relational databases. My testing strategy encompasses the use of Cypress for end-to-end testing, complemented by Jasmine and xUnit for thorough unit testing.</p>
       </div>
     </div>
   </div>
   <div>
     {skillsSection.skills.map((skills) => <p class="skills-text">{skills}</p>)}
   </div>
-</div>
+</section>
 <style lang="scss">
   @use '../styles/variables.scss' as global;
   .main {

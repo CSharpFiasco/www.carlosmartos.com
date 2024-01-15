@@ -1,11 +1,12 @@
 ---
 import EducationCard from './EducationCard.astro';
-import universityOfTulsaUrl from '../assets/images/UniversityOfTulsa.png';
+import universityOfTulsaUrl from '../assets/images/the-university-of-tulsa.svg';
 import developerActivitySvg from '../assets/images/undraw_developer_activity_re_39tg.svg';
 
 const educationInfo = [
   {
     schoolName: 'University of Tulsa',
+    schoolUrl: 'https://utulsa.edu/',
     logo: universityOfTulsaUrl,
     subHeader: 'Bachelor of Science Computer Science',
     duration: 'September 2013 - May 2017',
@@ -20,7 +21,7 @@ const educationInfo = [
 ] as const;
 ---
 
-<div class="main" id="education">
+<section class="main" id="education">
   <div class="education-main-div">
     <div>
       <div class="education-section">
@@ -30,6 +31,7 @@ const educationInfo = [
             educationInfo.map((school) => (
               <EducationCard
                 schoolName={school.schoolName}
+                schoolUrl={school.schoolUrl}
                 logoUrl={school.logo.src}
                 degree={school.subHeader}
                 duration={school.duration}
@@ -46,7 +48,7 @@ const educationInfo = [
       </div>
     </div>
   </div>
-</div>
+</section>
 <style lang="scss">
   @use '../styles/variables.scss' as global;
   .main {
