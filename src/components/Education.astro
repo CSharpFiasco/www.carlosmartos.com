@@ -19,6 +19,7 @@ const educationInfo = [
   },
 ] as const;
 ---
+
 <div class="main" id="education">
   <div class="education-main-div">
     <div>
@@ -47,7 +48,9 @@ const educationInfo = [
   </div>
 </div>
 <style>
-  .main { margin-top: var(--section-margin-top); }
+  .main {
+    margin-top: var(--section-margin-top);
+  }
   .education-main-div {
     display: flex;
     flex-direction: column;
@@ -93,5 +96,4 @@ const educationInfo = [
       text-align: left;
     }
   }
-
 </style>

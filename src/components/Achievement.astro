@@ -20,6 +20,7 @@ const achievementSection = {
   ],
 } as const;
 ---
+
 <div class="main" id="achievements">
   <div class="achievement-main-div">
     <div class="achievement-header">
@@ -40,7 +41,9 @@ const achievementSection = {
   </div>
 </div>
 <style>
-  .main { margin-top: var(--section-margin-top); }
+  .main {
+    margin-top: var(--section-margin-top);
+  }
   .achievement-heading {
     font-size: var(--heading-size);
     line-height: var(--line-height);

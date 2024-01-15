@@ -126,7 +126,9 @@ type WorkExperience = (typeof workExperiences)[number];
   </div>
 </div>
 <style>
-  .main { margin-top: var(--section-margin-top); }
+  .main {
+    margin-top: var(--section-margin-top);
+  }
   .experience-cards-div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -150,7 +152,6 @@ type WorkExperience = (typeof workExperiences)[number];
   }
 
   /* Media Query */
-
 
   @media (min-width: 768px) {
     .experience-heading {
