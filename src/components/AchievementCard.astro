@@ -25,30 +25,13 @@ const cardInfo = Astro.props;
   <div class="certificate-card-footer">
     {
       cardInfo.footerLink.map((v: FooterLink) => (
-        <span class="certificate-tag" data-url={v.url}>
+        <a class="certificate-tag" href={v.url} target="_blank">
           {v.name}
-        </span>
+        </a>
       ))
     }
   </div>
 </div>
-<script is:inline>
-  /**
-   *
-   * @param {HTMLElement | null} el
-   */
-  function addEventListenerToCertificateTag(el) {
-    const url = el?.dataset?.url;
-    if (!url) return;
-
-    el.addEventListener('click', () => {
-      window.open(url, '_blank');
-    });
-  }
-  document.querySelectorAll('.certificate-tag').forEach((el) => {
-    addEventListenerToCertificateTag(el);
-  });
-</script>
 <style>
   .card-image {
     max-width: 100%;
@@ -71,7 +54,7 @@ const cardInfo = Astro.props;
   .certificate-card {
     background-color: var(--primary-bg);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
     border-radius: 10px;
     border: 1px solid rgba(211, 211, 211, 0.397);
   }
@@ -98,7 +81,7 @@ const cardInfo = Astro.props;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .certificate-card-footer span.certificate-tag {
+  .certificate-card-footer a.certificate-tag {
     background: #55198b;
     color: #f5f2f4;
     vertical-align: middle;
@@ -110,17 +93,18 @@ const cardInfo = Astro.props;
     justify-content: center;
     white-space: nowrap;
     line-height: 1.5;
-    margin: 0 0.5rem 0.5rem 0;
+    margin: 0.5rem 0 1rem 0;
     padding: 0 0.75rem;
     cursor: pointer;
     transition: 0.2s ease-in;
+    text-decoration: none;;
   }
-  span.certificate-tag:hover {
+  a.certificate-tag:hover {
     background: #8c43ce;
   }
 
   @media (min-width: 1380px) {
-    .certificate-card-footer span.certificate-tag {
+    .certificate-card-footer a.certificate-tag {
       font-size: 1.1875rem;
     }
   }
