@@ -8,48 +8,29 @@ import Achievement from '../components/Achievement.astro';
 ---
 
 <Layout title="Carlos Martos Portfolio">
-    <div id="skip">
-      <a href="#greeting">Skip to Main Content</a>
-    </div>
-    <main>
-        <Greeting />
-        <Skills />
-        <Education />
-        <WorkExperience />
-        <Achievement />
-    </main>
+  <main>
+    <Greeting />
+    <Skills />
+    <Education />
+    <WorkExperience />
+    <Achievement />
+  </main>
 </Layout>
 
 <style>
-    /* Recommended here: https://webaim.org/techniques/css/invisiblecontent/ */
-    #skip a {
-        position: absolute;
-        left: -10000px;
-        top: auto;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-    }
-    #skip a:focus {
-        position: static;
-        width: auto;
-        height: auto;
-    }
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 960px;
+    max-width: calc(100% - 2rem);
+    color: var(--primary-text);
+    font-size: 1.25rem;
+  }
 
+  @media (min-width: 768px) {
     main {
-        margin: auto;
-        padding: 1rem;
-        width: 960px;
-        max-width: calc(100% - 2rem);
-        color: var(--primary-text);
-        font-size: 1.25rem;
-        line-height: 1.6;
+      padding: 1rem 2rem;
+      max-width: calc(100% - 4rem);
     }
-    h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        margin-bottom: 1em;
-    }
+  }
 </style>

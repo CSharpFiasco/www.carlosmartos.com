@@ -1,80 +1,59 @@
 ---
-import resume from "../assets/resume/Carlos_Martos_Resume_20230111.pdf";
-import sittingOnTableSvg from "../assets/images/undraw_on_the_office_re_cxds.svg";
-
-const greeting = {
-  /* Your Summary And Greeting Section */
-  subTitle:
-    "A passionate Software Developer with experience building web applications with .NET, SQL Server and Angular",
-  resumeLink: resume,
-} as const;
+import resume from '../assets/resume/Carlos_Martos_Resume_20230111.pdf';
+import sittingOnTableSvg from '../assets/images/undraw_on_the_office_re_cxds.svg';
 ---
 
-<div class="greet-main" id="greeting">
-  <div class="greeting-main">
-    <div class="greeting-text-div">
-      <div>
-        <h1>Hi all, I'm <span class="text-gradient">Carlos</span> 👋</h1>
-        <p class="greeting-text-p subTitle">{greeting.subTitle}</p>
-        <!-- <SocialMedia /> -->
-        <div class="button-greeting-div">
-          <div>
-            <a id="resume-download-button" class="main-button" href={greeting.resumeLink} rel="noreferrer" target="_blank">
-              See my resume
-            </a>
-          </div>
+<section class="main greeting-main" id="greeting">
+  <div class="greeting-text-div">
+    <div>
+      <h1>Hi all, I'm <span class="nowrap"><span class="text-gradient">Carlos</span> 👋</span></h1>
+      <p class="greeting-text-p subTitle">
+        A passionate software developer with experience building web applications with .NET, SQL Server and Angular
+      </p>
+      <!-- <SocialMedia /> -->
+      <div class="button-greeting-div">
+        <div>
+          <a id="resume-download-button" class="main-button" href={resume} rel="noreferrer" target="_blank">
+            See my resume
+          </a>
         </div>
       </div>
     </div>
-    <div class="greeting-image-div">
-      <img alt="Developer sitting on table" src={sittingOnTableSvg.src} />
-    </div>
   </div>
-</div>
+  <div class="greeting-image-div">
+    <img alt="Developer sitting on table" src={sittingOnTableSvg.src} />
+  </div>
+</section>
 <style>
-  .main {
-    padding: 20px 10px;
-    margin: 0px auto;
-    margin-top: 4rem;
-  }
-  .greet-main {
-    width: 90%;
-    padding: 20px 10px;
-    margin: 0px auto;
-    margin-top: 2rem;
-  }
-
   h1 {
-    white-space: nowrap;
+    font-size: var(--heading-size);
+    line-height: var(--line-height);
+    font-weight: 700;
+    text-align: center;
   }
 
-  .gretting-main {
-    width: 90%;
-    padding: 20px 10px;
-    margin: 0px auto;
+  .nowrap {
+    white-space: nowrap;
   }
 
   .greeting-main {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .greeting-main > * {
     flex: 1;
-    margin-bottom: 30px;
   }
   .button-greeting-div {
     display: flex;
-    margin-top: 20px;
-  }
-
-  .greeting-text {
-    font-size: 70px;
-    line-height: 1.1;
+    justify-content: space-around;
   }
 
   .greeting-text-p {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: var(--paragraph-size);
+    line-height: var(--line-height);
+    text-align: center;
   }
 
   .greeting-image-div > img {
@@ -97,14 +76,13 @@ const greeting = {
     font-weight: 700;
     width: max-content;
     padding: 13px 22px;
-    margin-right: 50px;
     text-transform: uppercase;
     border-radius: 6px;
     text-align: center;
     text-decoration: none;
     display: block;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out 0s;
   }
@@ -115,68 +93,19 @@ const greeting = {
     transform: translateY(-3px);
   }
 
-  @keyframes wave {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(-10deg);
-    }
-    20% {
-      transform: rotate(12deg);
-    }
-    30% {
-      transform: rotate(-10deg);
-    }
-    40% {
-      transform: rotate(9deg);
-    }
-    50% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-
   /* Media Query */
-  @media (max-width: 1380px) {
-    .greeting-text {
-      font-size: 50px;
-    }
-    .greeting-text-p {
-      font-size: 20px;
-    }
-  }
-  @media (max-width: 768px) {
-    .button-greeting-div {
-      justify-content: space-around;
-    }
-    .greeting-text {
-      font-size: 30px;
-      text-align: center;
-    }
-    .greeting-text-p {
-      font-size: 16px;
-      line-height: normal;
-      text-align: center;
-    }
+  @media (min-width: 768px) {
     .greeting-main {
-      display: block;
+      flex-direction: row;
+    }
+    h1 {
+      text-align: left;
+    }
+    .greeting-text-p {
+      text-align: left;
+    }
+    .button-greeting-div {
+      justify-content: start;
     }
   }
-
-/* Media Query Main Button */
-@media (max-width: 768px) {
-  .main-button {
-    font-size: 15px;
-    padding: 12px 18px;
-    margin-right: 0px;
-  }
-}
-@media (max-width: 320px) {
-  .main-button {
-    font-size: 12px;
-  }
-}
 </style>
