@@ -21,7 +21,7 @@ const achievementSection = {
 } as const;
 ---
 
-<div class="main" id="achievements">
+<section class="main" id="achievements">
   <div class="achievement-main-div">
     <div class="achievement-header">
       <h2 class="heading achievement-heading">{achievementSection.title}</h2>
@@ -39,34 +39,21 @@ const achievementSection = {
       }
     </div>
   </div>
-</div>
-<style>
+</section>
+<style lang="scss">
+  @use '../styles/variables.scss' as global;
   .main {
-    margin-top: var(--section-margin-top);
+    margin-top: global.$section-margin-top;
   }
   .achievement-heading {
-    font-size: var(--heading-size);
-    line-height: var(--line-height);
+    @include global.heading-fonts();
     font-weight: 400;
-  }
-  .achievement-subtitle {
-    text-transform: uppercase;
+    text-align: center;
   }
   /* Media Query */
-  @media (max-width: 1380px) {
+  @media (min-width: 768px) {
     .achievement-heading {
-      font-size: 2.5rem;
-    }
-  }
-  @media (max-width: 768px) {
-    .achievement-heading {
-      font-size: 1.875rem;
-      text-align: center;
-    }
-    .achievement-subtitle {
-      font-size: 1rem;
-      line-height: normal;
-      text-align: center;
+      text-align: left;
     }
   }
 </style>

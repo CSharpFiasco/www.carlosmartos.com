@@ -8,9 +8,8 @@ import sittingOnTableSvg from '../assets/images/undraw_on_the_office_re_cxds.svg
     <div>
       <h1>Hi all, I'm <span class="nowrap"><span class="text-gradient">Carlos</span> 👋</span></h1>
       <p class="greeting-text-p subTitle">
-        A passionate software developer with experience building web applications with .NET, SQL Server and Angular
+        A passionate software developer with experience building web applications with .NET, SQL Server and Angular.
       </p>
-      <!-- <SocialMedia /> -->
       <div class="button-greeting-div">
         <div>
           <a id="resume-download-button" class="main-button" href={resume} rel="noreferrer" target="_blank">
@@ -24,10 +23,11 @@ import sittingOnTableSvg from '../assets/images/undraw_on_the_office_re_cxds.svg
     <img alt="Developer sitting on table" src={sittingOnTableSvg.src} />
   </div>
 </section>
-<style>
+<style lang="scss">
+  /* Variables */
+  @use '../styles/variables.scss' as global;
   h1 {
-    font-size: var(--heading-size);
-    line-height: var(--line-height);
+    @include global.heading-fonts();
     font-weight: 700;
     text-align: center;
   }
@@ -51,8 +51,7 @@ import sittingOnTableSvg from '../assets/images/undraw_on_the_office_re_cxds.svg
   }
 
   .greeting-text-p {
-    font-size: var(--paragraph-size);
-    line-height: var(--line-height);
+    @include global.paragraph-fonts();
     text-align: center;
   }
 

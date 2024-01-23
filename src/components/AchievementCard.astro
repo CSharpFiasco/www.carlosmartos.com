@@ -14,25 +14,26 @@ interface Props {
 const cardInfo = Astro.props;
 ---
 
-<div class="certificate-card">
-  <div class="certificate-image-div">
+<div class="achievement-card">
+  <div class="achievement-image-div">
     <img src={cardInfo.image} alt="PWA" class="card-image" />
   </div>
-  <div class="certificate-detail-div">
-    <h5 class="card-title">{cardInfo.title}</h5>
+  <div class="achievement-detail-div">
+    <strong class="card-title">{cardInfo.title}</strong>
     <p class="card-subtitle">{cardInfo.subtitle}</p>
   </div>
-  <div class="certificate-card-footer">
+  <div class="achievement-card-footer">
     {
       cardInfo.footerLink.map((v: FooterLink) => (
-        <a class="certificate-tag" href={v.url} target="_blank">
+        <a class="achievement-tag" href={v.url} target="_blank">
           {v.name}
         </a>
       ))
     }
   </div>
 </div>
-<style>
+<style lang="scss">
+  @use '../styles/variables.scss' as global;
   .card-image {
     max-width: 100%;
     height: auto;
@@ -41,30 +42,28 @@ const cardInfo = Astro.props;
   }
   .card-title {
     color: var(--primary-text);
-    font-size: 1.375rem;
-    line-height: 1.5rem;
+    @include global.paragraph-fonts();
     font-weight: 700;
     margin: 15px 0 0 0;
   }
   .card-subtitle {
     color: #666666;
-    font-size: 1.0625rem;
-    line-height: 1.5rem;
+    @include global.paragraph-fonts();
   }
-  .certificate-card {
+  .achievement-card {
     background-color: var(--primary-bg);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
     padding: 1.5rem 1.5rem 0 1.5rem;
     border-radius: 10px;
     border: 1px solid rgba(211, 211, 211, 0.397);
   }
-  .certificate-detail-div {
+  .achievement-detail-div {
     text-align: center;
   }
-  .certificate-card:hover {
+  .achievement-card:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
   }
-  .certificate-image-div {
+  .achievement-image-div {
     position: relative;
     height: 250px;
     overflow: hidden;
@@ -75,13 +74,13 @@ const cardInfo = Astro.props;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem 1rem;
   }
-  .certificate-card-footer {
+  .achievement-card-footer {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .certificate-card-footer a.certificate-tag {
+  .achievement-card-footer a.achievement-tag {
     background: #55198b;
     color: #f5f2f4;
     vertical-align: middle;
@@ -97,14 +96,14 @@ const cardInfo = Astro.props;
     padding: 0 0.75rem;
     cursor: pointer;
     transition: 0.2s ease-in;
-    text-decoration: none;;
+    text-decoration: none;
   }
-  a.certificate-tag:hover {
+  a.achievement-tag:hover {
     background: #8c43ce;
   }
 
   @media (min-width: 1380px) {
-    .certificate-card-footer a.certificate-tag {
+    .achievement-card-footer a.achievement-tag {
       font-size: 1.1875rem;
     }
   }
