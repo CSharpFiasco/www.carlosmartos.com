@@ -23,10 +23,11 @@ import sittingOnTableSvg from '../assets/images/undraw_on_the_office_re_cxds.svg
     <img alt="Developer sitting on table" src={sittingOnTableSvg.src} />
   </div>
 </section>
-<style>
+<style lang="scss">
+  /* Variables */
+  @use '../styles/variables.scss' as global;
   h1 {
-    font-size: var(--heading-size);
-    line-height: var(--line-height);
+    @include global.heading-fonts();
     font-weight: 700;
     text-align: center;
   }
@@ -50,8 +51,7 @@ import sittingOnTableSvg from '../assets/images/undraw_on_the_office_re_cxds.svg
   }
 
   .greeting-text-p {
-    font-size: var(--paragraph-size);
-    line-height: var(--line-height);
+    @include global.paragraph-fonts();
     text-align: center;
   }
 

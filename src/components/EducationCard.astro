@@ -17,7 +17,9 @@ const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.
       <img crossorigin="anonymous" class="education-roundedimg" src={logoUrl} alt={schoolName} />
     </div>
     <div class="education-card-right">
-      <h3 class="education-text-school"><a class="education-school-link" href={schoolUrl} target="_blank">{schoolName}</a></h3>
+      <strong class="education-text-school">
+        <a class="education-school-link" href={schoolUrl} target="_blank">{schoolName}</a>
+      </strong>
 
       <div class="education-text-details">
         <p class="education-text-degree">{degree}</p>
@@ -31,7 +33,8 @@ const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.
     </div>
   </div>
 </div>
-<style>
+<style lang="scss">
+  @use '../styles/variables.scss' as global;
   .education-card {
     display: flex;
     flex-direction: column;
@@ -48,8 +51,8 @@ const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.
   }
 
   .education-text-school {
-    font-size: var(--subheading-size);
-    line-height: var(--line-height);
+    display: block;
+    @include global.paragraph-fonts();
     font-weight: 700;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -70,8 +73,7 @@ const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.
     margin-top: 1rem;
   }
   .education-text-details > * {
-    font-size: var(--paragraph-size);
-    line-height: var(--line-height);
+    @include global.paragraph-fonts();
     text-align: center;
   }
 

@@ -111,7 +111,7 @@ type WorkExperience = (typeof workExperiences)[number];
               <div style={{ background: rgb([...card.backgroundColor]) ?? '' }} class="experience-banner">
                 <div class="experience-blurred_div" />
                 <div class="experience-div-company">
-                  <h4 class="experience-text-company">{card.company}</h4>
+                  <strong class="experience-text-company">{card.company}</strong>
                 </div>
 
                 <img
@@ -122,8 +122,8 @@ type WorkExperience = (typeof workExperiences)[number];
                 />
               </div>
               <div class="experience-text-details">
-                <h4 class="experience-text-role">{card.role}</h4>
-                <h5 class="experience-text-date">{card.date}</h5>
+                <strong class="experience-text-role">{card.role}</strong>
+                <h2 class="experience-text-date">{card.date}</h2>
                 <p class="subTitle experience-text-desc">{card.desc}</p>
                 <ul>
                   {card.descBullets.map((descBullet: string) => (
@@ -150,8 +150,7 @@ type WorkExperience = (typeof workExperiences)[number];
   }
 
   .experience-heading {
-    font-size: var(--heading-size);
-    line-height: var(--line-height);
+    @include global.heading-fonts();
     font-weight: 400;
     text-align: center;
   }
@@ -263,6 +262,7 @@ type WorkExperience = (typeof workExperiences)[number];
   }
 
   .experience-text-role {
+    display: block;
     text-align: center;
     color: var(--primary-text);
     font-weight: 700;
