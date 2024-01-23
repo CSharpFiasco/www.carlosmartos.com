@@ -8,6 +8,7 @@ interface Props {
   title: string;
   subtitle: string;
   image: string | null;
+  alt: string;
   footerLink: readonly FooterLink[];
 }
 
@@ -16,7 +17,7 @@ const cardInfo = Astro.props;
 
 <div class="achievement-card">
   <div class="achievement-image-div">
-    <img src={cardInfo.image} alt="PWA" class="card-image" />
+    <img src={cardInfo.image} alt={cardInfo.alt} class="card-image" />
   </div>
   <div class="achievement-detail-div">
     <strong class="card-title">{cardInfo.title}</strong>
@@ -35,10 +36,9 @@ const cardInfo = Astro.props;
 <style lang="scss">
   @use '../styles/variables.scss' as global;
   .card-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    width: 360px;
-    max-width: 100%;
+    max-width: 360px;
   }
   .card-title {
     color: var(--primary-text);
