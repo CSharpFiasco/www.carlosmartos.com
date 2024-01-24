@@ -5,9 +5,20 @@ import Education from '../components/Education.astro';
 import Skills from '../components/Skills.astro';
 import Greeting from '../components/Greeting.astro';
 import Achievement from '../components/Achievement.astro';
----
+import { type ProfilePage, type WithContext } from 'schema-dts';
 
-<Layout title="Carlos Martos Portfolio">
+const profilePage: WithContext<ProfilePage> = { 
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@id": "#main-author",
+    "@type": "Person",
+    "name": "Carlos Martos"
+  },
+  dateModified: (new Date()).toISOString()
+};
+---
+<Layout title="Carlos Martos Portfolio" schema={profilePage}>
   <main>
     <Greeting />
     <Skills />
