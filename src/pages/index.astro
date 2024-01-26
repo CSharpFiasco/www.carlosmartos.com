@@ -7,17 +7,19 @@ import Greeting from '../components/Greeting.astro';
 import Achievement from '../components/Achievement.astro';
 import { type ProfilePage, type WithContext } from 'schema-dts';
 
-const profilePage: WithContext<ProfilePage> = { 
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
+const profilePage = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
   mainEntity: {
-    "@id": "#main-author",
-    "@type": "Person",
-    "name": "Carlos Martos"
+    '@id': '#main-author',
+    '@type': 'Person',
+    name: 'Carlos Martos',
+    sameAs: ['https://www.linkedin.com/in/carlos-k-martos'],
   },
-  dateModified: (new Date()).toISOString()
-};
+  dateModified: new Date().toISOString(),
+} as const satisfies WithContext<ProfilePage>;
 ---
+
 <Layout title="Carlos Martos Portfolio" schema={profilePage}>
   <main>
     <Greeting />

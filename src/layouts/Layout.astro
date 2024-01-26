@@ -1,8 +1,8 @@
 ---
 import { type WithContext, type Thing } from 'schema-dts';
 interface Props {
-  title: string;
-  schema: WithContext<Thing>
+  readonly title: string;
+  readonly schema: Readonly<WithContext<Thing>>;
 }
 
 const { title, schema } = Astro.props;
@@ -29,7 +29,7 @@ const { title, schema } = Astro.props;
     >
     <!-- End Google Tag Manager (noscript) -->
     <slot />
-    <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </body>
 </html>
 <style is:global>

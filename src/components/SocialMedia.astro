@@ -1,0 +1,99 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const socialMediaLinks = {
+  github: 'https://github.com/csharpfiasco',
+  linkedin: 'https://www.linkedin.com/in/carlos-k-martos',
+  gmail: 'carloskmartos@gmail.com',
+  stackoverflow: 'https://stackoverflow.com/users/5303894/csharpfiasco',
+} as const;
+---
+
+<div class="social-media-div">
+  <a
+    href={socialMediaLinks.github}
+    class="icon-button github"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Github profile"
+  >
+    <span class="circle github">
+      <Icon class="circle-icon" name="simple-icons:github" />
+    </span>
+  </a>
+
+  <a
+    href={socialMediaLinks.linkedin}
+    class="icon-button linkedin"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn profile"
+  >
+    <span class="circle linkedin">
+      <Icon class="circle-icon" name="simple-icons:linkedin" />
+    </span>
+  </a>
+
+    <a
+      href={socialMediaLinks.stackoverflow}
+      class="icon-button stack-overflow"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Stack overflow profile"
+    >
+      <span class="circle stackoverflow">
+        <Icon class="circle-icon" name="simple-icons:stackoverflow" />
+      </span>
+    </a>
+</div>
+<style lang="scss">
+  .social-media-div {
+    margin-top: 1.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-button {
+    display: inline-block;
+  }
+
+  .circle {
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 3rem;
+    line-height: 3rem;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 3rem;
+
+    &.linkedin {
+      background-color: #0e76a8;
+    }
+
+    &.github {
+      background-color: #333;
+    }
+
+    &.stackoverflow {
+      background-color: #f48024;
+    }
+  }
+
+  /* Hover Transition */
+  .google i:hover,
+  .github i:hover,
+  .linkedin i:hover,
+  .stack-overflow i:hover {
+    background-color: black;
+  }
+</style>

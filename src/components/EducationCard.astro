@@ -1,11 +1,11 @@
 ---
 interface Props {
-  schoolName: string;
-  schoolUrl: string;
-  degree: string;
-  logoUrl: string;
-  duration: string;
-  descBullets: readonly string[];
+  readonly schoolName: string;
+  readonly schoolUrl: string;
+  readonly degree: string;
+  readonly logoUrl: string;
+  readonly duration: string;
+  readonly descBullets: readonly string[];
 }
 
 const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.props;
