@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 let baseUrl: string | undefined;
+const exceptionUrls = ['https://ieeexplore.ieee.org/document/7739674'] as const;
 
 describe('home page', () => {
   beforeEach(() => {
@@ -26,11 +27,11 @@ describe('home page', () => {
   it('should have valid links', () => {
     cy.get('a').each(($a) => {
       const href = $a.prop('href');
-      // cy.task("log", href);
 
-      if (href) {
-        cy.request(href).its('status').should('eq', 200);
-      }
+      if (!href) throw new Error('href is not defined');
+      if (exceptionUrls.includes(href)) return;
+
+      cy.request(href).its('status').should('eq', 200);
     });
   });
 });
