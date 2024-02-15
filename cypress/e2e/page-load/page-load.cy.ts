@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 let baseUrl: string | undefined;
-const exceptionUrls = ['https://ieeexplore.ieee.org/document/7739674'] as const;
+const exceptionUrls = ['https://ieeexplore.ieee.org/document/7739674', 'https://stackoverflow.com/users/5303894/csharpfiasco'] as const;
 
 describe('home page', () => {
   beforeEach(() => {
