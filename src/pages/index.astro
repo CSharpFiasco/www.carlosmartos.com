@@ -7,20 +7,65 @@ import Greeting from '../components/Greeting.astro';
 import Achievement from '../components/Achievement.astro';
 import { type ProfilePage, type WithContext } from 'schema-dts';
 
+const indexPageDescription =
+  'I am a software Developer experienced in .NET and SQL Server development as well as Angular. I focus on web app refactoring and query tuning.';
+
 const profilePage = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
+  '@id': 'https://carlosmartos.com/',
   mainEntity: {
     '@id': '#main-author',
     '@type': 'Person',
     name: 'Carlos Martos',
-    sameAs: ['https://www.linkedin.com/in/carlos-k-martos'],
+    sameAs: ['https://www.linkedin.com/in/carlos-k-martos', 'https://github.com/csharpfiasco'],
+    alumniOf: [
+      {
+        '@type': 'EducationalOrganization',
+        '@id': 'https://utulsa.edu/',
+        name: 'The University of Tulsa',
+      },
+      {
+        '@type': 'Corporation',
+        name: 'QuikTrip Corporation',
+      },
+    ],
+    worksFor: {
+      '@type': 'Corporation',
+      name: 'Hogan Assessments',
+      url: 'https://www.hoganassessments.com/',
+    },
+    jobTitle: 'Software Engineer',
+    knowsAbout: [
+      'https://en.wikipedia.org/wiki/TypeScript',
+      'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)',
+      'https://en.wikipedia.org/wiki/JavaScript',
+      'https://en.wikipedia.org/wiki/HTML',
+      'https://en.wikipedia.org/wiki/CSS',
+      'https://en.wikipedia.org/wiki/Angular_(web_framework)',
+      'https://en.wikipedia.org/wiki/.NET',
+      'https://en.wikipedia.org/wiki/Microsoft_SQL_Server',
+      'https://en.wikipedia.org/wiki/Query_plan',
+      'https://en.wikipedia.org/wiki/Cosmos_DB',
+      'https://en.wikipedia.org/wiki/GraphQL',
+      'https://en.wikipedia.org/wiki/Azure_DevOps_Server',
+      'https://en.wikipedia.org/wiki/Microsoft_Azure',
+      'https://en.wikipedia.org/wiki/CI/CD',
+      'https://en.wikipedia.org/wiki/Agile_software_development',
+      'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)',
+      'https://en.wikipedia.org/wiki/Unit_testing',
+      'https://en.wikipedia.org/wiki/Swagger_(software)',
+      'https://en.wikipedia.org/wiki/Cypress_(software)',
+      'https://en.wikipedia.org/wiki/Entity_Framework',
+      'https://en.wikipedia.org/wiki/Visual_Studio',
+      'https://en.wikipedia.org/wiki/Visual_Studio_Code',
+    ],
   },
   dateModified: new Date().toISOString(),
 } as const satisfies WithContext<ProfilePage>;
 ---
 
-<Layout title="Carlos Martos Portfolio" schema={profilePage}>
+<Layout title="Carlos Martos Portfolio" description={indexPageDescription} schema={profilePage}>
   <main>
     <Greeting />
     <Skills />
