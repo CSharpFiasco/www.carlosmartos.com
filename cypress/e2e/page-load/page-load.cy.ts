@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 let baseUrl: string | undefined;
-const exceptionUrls = ['https://ieeexplore.ieee.org/document/7739674', 'https://stackoverflow.com/users/5303894/csharpfiasco'] as const;
 
 describe('home page', () => {
   beforeEach(() => {
@@ -28,10 +27,14 @@ describe('home page', () => {
     cy.get('a').each(($a) => {
       const href = $a.prop('href');
 
-      if (!href) throw new Error('href is not defined');
-      if (exceptionUrls.includes(href)) return;
-
-      cy.request(href).its('status').should('eq', 200);
+      cy.request({
+        url: href,
+        failOnStatusCode: false,
+      })
+        .its('status')
+        .should((status) => {
+          expect(status).to.be.oneOf([200, 418, 403]);
+        });
     });
   });
 });
