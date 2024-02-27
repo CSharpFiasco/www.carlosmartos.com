@@ -35,7 +35,7 @@ const { title, schema, description } = Astro.props;
   </head>
   <body>
     <slot />
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   </body>
 </html>
 <style is:global>
