@@ -25,22 +25,22 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@iconify-json/simple-icons": "^1.1.97",
-    "astro": "^4.5.14",
+    "@iconify-json/simple-icons": "^1.1.100",
+    "astro": "^4.7.0",
     "astro-icon": "^1.1.0",
-    "typescript-eslint": "^7.5.0"
+    "typescript-eslint": "^7.7.1"
   },
   "devDependencies": {
-    "cypress": "^13.7.2",
+    "cypress": "^13.8.1",
     "eslint": "^8.57.0",
-    "eslint-plugin-astro": "^0.33.1",
+    "eslint-plugin-astro": "^1.0.3",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "sass": "^1.72.0",
+    "sass": "^1.75.0",
     "schema-dts": "^1.1.2",
     "start-server-and-test": "^2.0.3",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   }
 }
