@@ -1,5 +1,6 @@
 ---
 import programmingSvg from '../assets/images/undraw_programming_re_kg9v.svg';
+import { yearsSinceDate } from '../helpers/date';
 
 const skillsSection = {
   /* Make Sure You include correct Font Awesome class to view your icon
@@ -29,8 +30,8 @@ const skillsSection = {
       <div class="skills-text-div">
         <h2 class="skills-heading">What I do</h2>
         <p class="skills-text-subtitle">
-          With over 7 years of experience as a software developer, I have a strong background in creating applications,
-          including desktop applications, background services, and ETLs. Additionally, I excel in the design of
+          With {yearsSinceDate(new Date(2017, 9, 1))} years of experience as a software developer, I have a strong background in creating applications,
+          including web and desktop applications, background services, and ETLs. Additionally, I excel in the design of
           relational databases. My testing strategy encompasses the use of Cypress for end-to-end testing, complemented
           by Jasmine and xUnit for thorough unit testing.
         </p>
