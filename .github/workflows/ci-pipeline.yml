@@ -19,6 +19,8 @@ jobs:
               submodules: true
           - name: Run install
             run: npm ci
+          - name: Run ESLint
+            run: npm run lint
           - name: Run build
             run: npm run build
           - name: Run cypress on Chrome
