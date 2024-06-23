@@ -26,21 +26,21 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@iconify-json/simple-icons": "^1.1.106",
-    "astro": "^4.10.3",
+    "astro": "^4.11.0",
     "astro-icon": "^1.1.0",
-    "typescript-eslint": "^7.13.1"
+    "typescript-eslint": "7.12"
   },
   "devDependencies": {
-    "cypress": "^13.11.0",
+    "cypress": "^13.12.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^1.2.2",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
     "sass": "^1.77.6",
     "schema-dts": "^1.1.2",
     "start-server-and-test": "^2.0.4",
-    "typescript": "^5.4.5"
+    "typescript": "5.4"
   }
 }

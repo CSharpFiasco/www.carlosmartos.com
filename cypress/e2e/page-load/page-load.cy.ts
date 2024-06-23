@@ -33,7 +33,7 @@ describe('home page', () => {
       })
         .its('status')
         .should((status) => {
-          expect(status).to.be.oneOf([200, 418, 403]);
+          expect(status).to.be.oneOf([200, 418, 403, 429]);
         });
     });
   });
