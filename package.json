@@ -24,23 +24,26 @@
     "cy:open:prod": "cypress open --env \"base_url=https://www.carlosmartos.com\""
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@iconify-json/simple-icons": "^1.2.4",
-    "astro": "^4.15.9",
-    "astro-icon": "^1.1.1",
-    "typescript-eslint": "^8.7.0"
+    "@astrojs/check": "^0.9.4",
+    "@iconify-json/simple-icons": "^1.2.5",
+    "astro": "^4.15.11",
+    "astro-icon": "^1.1.1"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.12.0",
     "cypress": "^13.15.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.12.0",
     "eslint-plugin-astro": "^1.2.4",
-    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
+    "globals": "^15.10.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "sass": "^1.79.4",
     "schema-dts": "^1.1.2",
     "start-server-and-test": "^2.0.8",
-    "typescript": "5.5"
+    "typescript": "5.5",
+    "typescript-eslint": "^8.8.0"
   }
 }
