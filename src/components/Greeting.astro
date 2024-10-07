@@ -29,9 +29,9 @@ import SocialMedia from './SocialMedia.astro';
   /* Variables */
   @use '../styles/variables.scss' as global;
   h1 {
-    @include global.heading-fonts();
     font-weight: 700;
     text-align: center;
+    @include global.heading-fonts();
   }
 
   .nowrap {
@@ -53,8 +53,8 @@ import SocialMedia from './SocialMedia.astro';
   }
 
   .greeting-text-p {
-    @include global.paragraph-fonts();
     text-align: center;
+    @include global.paragraph-fonts();
   }
 
   .greeting-image-div > img {

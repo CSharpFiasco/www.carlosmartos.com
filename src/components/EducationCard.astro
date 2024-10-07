@@ -52,12 +52,12 @@ const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.
 
   .education-text-school {
     display: block;
-    @include global.paragraph-fonts();
     font-weight: 700;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     text-align: center;
+    @include global.paragraph-fonts();
   }
 
   .education-school-link {
@@ -73,8 +73,8 @@ const { schoolName, schoolUrl, degree, logoUrl, duration, descBullets } = Astro.
     margin-top: 1rem;
   }
   .education-text-details > * {
-    @include global.paragraph-fonts();
     text-align: center;
+    @include global.paragraph-fonts();
   }
 
   .education-text-details > .education-text-bullets {
