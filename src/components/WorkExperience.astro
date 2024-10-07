@@ -13,15 +13,15 @@ const workExperiences = [
     date: 'March 2023 – Current',
     desc: '.NET 8/Cosmos DB/Angular',
     descBullets: [
-      'RxJS',
-      'Redux (NgRx)',
-      'Unit Tests (Jasmine/xUnit)',
-      'E2E Tests (Cypress/Playwright)',
-      'API development',
-      'Swagger (Swashbuckle)',
-      'Azure DevOps',
       'Microservices',
       'Event-driven architecture',
+      'API development',
+      'E2E Tests (Cypress/Playwright)',
+      'Unit Tests (Jasmine/xUnit)',
+      'Redux (NgRx)',
+      'RxJS',
+      'Swagger (Swashbuckle)',
+      'Azure DevOps',
       'Storybook',
     ],
     backgroundColor: [4, 4, 4],
@@ -154,9 +154,9 @@ type WorkExperience = (typeof workExperiences)[number];
   }
 
   .experience-heading {
-    @include global.heading-fonts();
     font-weight: 400;
     text-align: center;
+    @include global.heading-fonts();
   }
 
   .experience-container {
@@ -291,6 +291,7 @@ type WorkExperience = (typeof workExperiences)[number];
   }
 
   .experience-text-desc {
+    padding-top: 1rem;
     text-align: center;
   }
 

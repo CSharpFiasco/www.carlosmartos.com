@@ -48,13 +48,11 @@ const achievementSection = {
     margin-top: global.$section-margin-top;
   }
   .achievement-heading {
-    @include global.heading-fonts();
     font-weight: 400;
     text-align: center;
-  }
-  /* Media Query */
-  @media (min-width: 768px) {
-    .achievement-heading {
+    @include global.heading-fonts();
+    /* Media Query */
+    @media (min-width: 768px) {
       text-align: left;
     }
   }
