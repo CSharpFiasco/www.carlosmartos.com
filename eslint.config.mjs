@@ -20,7 +20,7 @@ const compat = new FlatCompat({
 export default [
     ...eslintPluginAstro.configs.recommended,
     {
-        ignores: ["cypress/*", "dist/*", "**/cypress.config.ts", "**/vite.config.ts"],
+        ignores: ["cypress/*", "dist/*", ".astro/*", "**/cypress.config.ts", "**/vite.config.ts"],
     }, ...compat.extends(
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
