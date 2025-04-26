@@ -35,7 +35,6 @@ jobs:
           # https://github.com/microsoft/Oryx/blob/main/doc/configuration.md
           CUSTOM_BUILD_COMMAND: npm ci && npm run build
           ASTRO_TELEMETRY_DISABLED: 1
-          # NODE_ENV: production
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
