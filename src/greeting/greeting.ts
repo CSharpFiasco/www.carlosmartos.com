@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SocialMedia } from "../social-media/social-media";
 
 @Component({
   selector: 'app-greeting',
-  imports: [],
+  imports: [SocialMedia],
   templateUrl: './greeting.html',
   styleUrl: './greeting.scss'
 })
