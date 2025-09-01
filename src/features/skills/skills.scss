@@ -1,0 +1,46 @@
+@use "../../variables.scss" as global;
+
+.main {
+  margin-top: global.$section-margin-top;
+}
+.skills-main-div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  margin-bottom: 25px;
+}
+
+.skills-main-div > * {
+  flex: 1;
+}
+
+.skills-image-div > img {
+  width: 100%;
+  height: auto;
+}
+
+.skills-heading {
+  font-weight: 400;
+  text-align: center;
+  @include global.heading-fonts();
+}
+
+.skills-text-subtitle {
+  text-align: center;
+  @include global.paragraph-fonts();
+}
+
+.skills-text {
+  @include global.paragraph-fonts();
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+  .skills-heading,
+  .skills-text-subtitle {
+    text-align: left;
+  }
+  .skills-main-div {
+    flex-direction: row;
+  }
+}
