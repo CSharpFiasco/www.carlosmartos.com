@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './greeting.scss'
 })
 export class Greeting {
-
+  protected readonly resume = 'resume/Carlos_Martos_Resume.pdf';
 }

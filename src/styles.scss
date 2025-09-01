@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+    --primary-bg: #fff;
+    --primary-text: #13151a;
+    --secondary-bg: #13151a;
+    --secondary-text: #fff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-bg: #13151a;
+      --primary-text: #fff;
+      --secondary-bg: #fff;
+      --secondary-text: #13151a;
+    }
+  }
+  html {
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    background: var(--primary-bg);
+    background-size: 224px;
+  }
+  body {
+    margin: 0;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  code {
+    /* https://github.com/system-fonts/modern-font-stacks#monospace-code */
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  }

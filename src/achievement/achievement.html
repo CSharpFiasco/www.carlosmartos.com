@@ -1,1 +1,11 @@
-<p>achievement works!</p>
+<section class="main" id="achievements">
+  <div class="achievement-main-div">
+    <div class="achievement-header">
+      <h2 class="heading achievement-heading">{{achievementSection.title}}</h2>
+    </div>
+    @for (achievement of achievementSection.achievementsCards; track achievement) {
+      <!-- todo: add cards -->
+      <app-achievement-card></app-achievement-card>
+    }
+  </div>
+</section>

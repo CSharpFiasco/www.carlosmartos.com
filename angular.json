@@ -61,7 +61,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular/build:dev-g",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "www.carlosmartos.com.2:build:production"
