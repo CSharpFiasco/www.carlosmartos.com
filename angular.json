@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "www.carlosmartos.com.2": {
+    "www.carlosmartos.com": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "www.carlosmartos.com.2:build:production"
+              "buildTarget": "www.carlosmartos.com:build:production"
             },
             "development": {
-              "buildTarget": "www.carlosmartos.com.2:build:development"
+              "buildTarget": "www.carlosmartos.com:build:development"
             }
           },
           "defaultConfiguration": "development"

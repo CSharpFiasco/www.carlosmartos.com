@@ -13,5 +13,5 @@ import { Achievement } from "../features/achievement/achievement";
   styleUrl: './app.scss'
 })
 export class App {
-  protected title = 'www.carlosmartos.com.2';
+  protected title = 'www.carlosmartos.com';
 }
