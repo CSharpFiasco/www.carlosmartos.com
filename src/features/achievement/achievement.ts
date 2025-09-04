@@ -17,7 +17,7 @@ export class Achievement {
         subtitle: 'Publication: 2016 IEEE Symposium on Visual Languages and Human-Centric Computing',
         image: '/images/undraw_books_re_8gea.svg',
         alt: 'Woman showing book',
-        footerLink: [
+        footerLinks: [
           {
             name: 'IEEE Publication',
             url: 'https://ieeexplore.ieee.org/document/7739674',

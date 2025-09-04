@@ -1,0 +1,13 @@
+@use "../../variables.scss" as global;
+.main {
+  margin-top: global.$section-margin-top;
+}
+.achievement-heading {
+  font-weight: 400;
+  text-align: center;
+  @include global.heading-fonts();
+  /* Media Query */
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}

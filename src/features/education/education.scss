@@ -1,0 +1,49 @@
+@use "../../variables.scss" as global;
+
+  .main {
+    margin-top: global.$section-margin-top;
+  }
+  .education-main-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education-main-div > * {
+    flex: 1;
+  }
+
+  .education-image-div > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .education-heading {
+    font-weight: 400;
+    text-align: center;
+    @include global.heading-fonts();
+  }
+
+  .education-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .education-section > * {
+    flex: 1;
+  }
+
+  .education-card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .education-main-div {
+      flex-direction: row;
+    }
+
+    .education-heading {
+      text-align: left;
+    }
+  }
