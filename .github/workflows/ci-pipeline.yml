@@ -23,6 +23,8 @@ jobs:
             run: npm run lint
           - name: Run build
             run: npm run build
+          - name: Run tests
+            run: npm run test:ci
           - name: Run cypress on Chrome
             run: npm run cy:test:local
           - name: Run cypress on Firefox
