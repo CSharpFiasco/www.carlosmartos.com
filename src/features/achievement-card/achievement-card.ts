@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 
-type FooterLink = {
+interface FooterLink {
   readonly name: string;
   readonly url: string;
 };

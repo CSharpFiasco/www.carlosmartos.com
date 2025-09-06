@@ -6,7 +6,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "analyze-bundle": "ng build --configuration=analyze-bundle && source-map-explorer dist/**/*.js --no-border-checks"
+    "analyze-bundle": "ng build --configuration=analyze-bundle && source-map-explorer dist/**/*.js --no-border-checks",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,8 @@
     "@angular/compiler-cli": "^20.2.3",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.19.11",
+    "angular-eslint": "20.2.0",
+    "eslint": "^9.33.0",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -34,6 +37,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "schema-dts": "^1.1.5",
     "source-map-explorer": "^2.5.3",
-    "typescript": "~5.8.2"
+    "typescript": "~5.8.2",
+    "typescript-eslint": "8.40.0"
   }
 }
