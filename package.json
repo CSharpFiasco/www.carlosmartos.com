@@ -2,7 +2,7 @@
   "name": "www.carlosmartos.com",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve",
+    "start": "ng serve --port 4321",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
