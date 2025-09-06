@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SocialMedia } from './social-media';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('SocialMedia', () => {
   let component: SocialMedia;
@@ -8,7 +9,8 @@ describe('SocialMedia', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SocialMedia]
+      imports: [SocialMedia],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

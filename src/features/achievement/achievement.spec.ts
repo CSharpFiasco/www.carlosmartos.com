@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Achievement } from './achievement';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('Achievement', () => {
   let component: Achievement;
@@ -8,7 +9,8 @@ describe('Achievement', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Achievement]
+      imports: [Achievement],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 
