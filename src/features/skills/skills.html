@@ -1,0 +1,26 @@
+<section class="main" id="skills">
+  <div class="skills-main-div">
+    <div>
+      <div class="skills-image-div">
+        <img alt="Developer Working" src="{{ skillsSection.imageUrl }}" />
+      </div>
+    </div>
+    <div>
+      <div class="skills-text-div">
+        <h2 class="skills-heading">What I do</h2>
+        <p class="skills-text-subtitle">
+          With {{ skillsSection.firstWorkingDate | yearsSinceDate }} years of experience as a software developer, I have a strong background
+          in creating applications, including web and desktop applications, background services, and ETLs. Additionally,
+          I excel in the design of relational databases. My testing strategy encompasses the use of Cypress for end-to-end
+          testing, complemented by Jasmine and xUnit for thorough unit testing.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    @for (skills of skillsSection.skills; track skills) {
+      <p class="skills-text">{{skills}}</p>
+    }
+  </div>
+
+</section>

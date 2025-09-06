@@ -1,0 +1,16 @@
+<div class="achievement-card">
+  <div class="achievement-image-div">
+    <img src={{image()}} alt={{alt()}} class="card-image" />
+  </div>
+  <div class="achievement-detail-div">
+    <strong class="card-title">{{title()}}</strong>
+    <p class="card-subtitle">{{subtitle()}}</p>
+  </div>
+  <div class="achievement-card-footer">
+    @for(footer of footerLinks(); track footer) {
+        <a class="achievement-tag" href={{footer.url}} target="_blank">
+          {{footer.name}}
+        </a>
+    }
+  </div>
+</div>

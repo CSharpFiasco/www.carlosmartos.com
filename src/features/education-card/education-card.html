@@ -1,0 +1,24 @@
+<div>
+  <div class="education-card">
+    <div class="education-card-logo">
+      <img crossorigin="anonymous" class="education-roundedimg" src={{logoUrl()}} alt={{schoolName()}} />
+    </div>
+    <div class="education-card-right">
+      <strong class="education-text-school">
+        <a class="education-school-link" href={{schoolUrl()}} target="_blank">{{schoolName()}}</a>
+      </strong>
+
+      <div class="education-text-details">
+        <p class="education-text-degree">{{degree()}}</p>
+        <p class="education-text-duration">{{duration()}}</p>
+        <div class="education-text-bullets">
+          <ul>
+            @for (bullet of bullets(); track bullet) {
+              <li class="education-text-bullet">{{bullet}}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

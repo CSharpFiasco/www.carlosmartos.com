@@ -1,0 +1,16 @@
+<section class="main" id="achievements">
+  <div class="achievement-main-div">
+    <div class="achievement-header">
+      <h2 class="heading achievement-heading">{{achievementSection.title}}</h2>
+    </div>
+    @for (achievement of achievementSection.achievementsCards; track achievement) {
+      <app-achievement-card
+        [title]="achievement.title"
+        [subtitle]="achievement.subtitle"
+        [image]="achievement.image"
+        [alt]="achievement.alt"
+        [footerLinks]="achievement.footerLinks"
+      ></app-achievement-card>
+    }
+  </div>
+</section>

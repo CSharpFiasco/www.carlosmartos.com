@@ -1,0 +1,87 @@
+@use "../../variables.scss" as global;
+  .education-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .education-card-logo {
+    text-align: center;
+  }
+
+  .education-head {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .education-text-school {
+    display: block;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    @include global.paragraph-fonts();
+  }
+
+  .education-school-link {
+    color: var(--primary-text);
+    text-decoration: none;
+  }
+
+  .education-school-link:hover {
+    text-decoration: underline;
+  }
+
+  .education-text-details {
+    margin-top: 1rem;
+  }
+  .education-text-details > * {
+    text-align: center;
+    @include global.paragraph-fonts();
+  }
+
+  .education-text-details > .education-text-bullets {
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .education-roundedimg {
+    object-fit: cover;
+    width: 4rem;
+    height: 4rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 0.5rem 0;
+  }
+
+  .education-text-bullets > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* Media Query */
+
+  @media (min-width: 768px) {
+    .education-card-logo {
+      text-align: left;
+    }
+    .education-roundedimg {
+      width: 6rem;
+      height: 6rem;
+    }
+    .education-text-details > * {
+      text-align: left;
+    }
+
+    .education-text-school {
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 1380px) {
+    .education-card {
+      flex-direction: column;
+    }
+  }

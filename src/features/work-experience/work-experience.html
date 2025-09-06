@@ -1,0 +1,37 @@
+<div class="main" id="experience">
+  <div class="experience-container" id="workExperience">
+    <div>
+      <h2 class="experience-heading">Experiences</h2>
+      <div class="experience-cards-div">
+        @for(card of workExperiences; track card) {
+            <div class="experience-card">
+              <div [style]="{ background: card.backgroundColor | rgb }" class="experience-banner">
+                <div class="experience-blurred_div"></div>
+                <div class="experience-div-company">
+                  <strong class="experience-text-company">{{card.company}}</strong>
+                </div>
+
+                <img
+                  crossorigin="anonymous"
+                  class="experience-roundedimg"
+                  src={{card.companyLogo}}
+                  alt={{card.company}}
+                />
+              </div>
+              <div class="experience-text-details">
+                <strong class="experience-text-role">{{card.role}}</strong>
+                <h2 class="experience-text-date">{{card.date}}</h2>
+                <p class="subTitle experience-text-desc">{{card.desc}}</p>
+                <ul>
+                  @for (descBullet of card.descBullets; track descBullet)
+                  {
+                    <li class="subTitle">{{descBullet}}</li>
+                  }
+                </ul>
+              </div>
+            </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
