@@ -7,7 +7,14 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "analyze-bundle": "ng build --configuration=analyze-bundle && source-map-explorer dist/**/*.js --no-border-checks",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "cy:run:local": "cypress run --env \"base_url=http://localhost:4321\" --browser chrome",
+    "cy:run:local:firefox": "cypress run --env \"base_url=http://localhost:4321\" --browser firefox",
+    "cy:test:local": "start-server-and-test start http-get://localhost:4321 cy:run:local",
+    "cy:test:local:firefox": "start-server-and-test start http-get://localhost:4321 cy:run:local:firefox",
+    "cy:open:local": "cypress open --env \"base_url=http://localhost:4321\"",
+    "cy:run:prod": "cypress run --env \"base_url=https://www.carlosmartos.com\"",
+    "cy:open:prod": "cypress open --env \"base_url=https://www.carlosmartos.com\""
   },
   "private": true,
   "dependencies": {
@@ -28,6 +35,7 @@
     "@types/jasmine": "~5.1.0",
     "@types/node": "^22.18.1",
     "angular-eslint": "20.2.0",
+    "cypress": "^15.1.0",
     "eslint": "^9.35.0",
     "jasmine-core": "^5.10.0",
     "karma": "~6.4.0",
@@ -37,6 +45,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "schema-dts": "^1.1.5",
     "source-map-explorer": "^2.5.3",
+    "start-server-and-test": "^2.1.0",
     "typescript": "~5.8.2",
     "typescript-eslint": "^8.42.0"
   }
