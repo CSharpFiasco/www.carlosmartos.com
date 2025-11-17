@@ -17,7 +17,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-      - name: Build And Deploy
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '24.x'
+      - name: npm install
+        run: npm ci
+      - name: Build app
+        run: npm run build
+      - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -26,15 +34,11 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
-          output_location: "dist/www.carlosmartos.com/browser" # Built app content directory - optional
-          app_build_command: "npm run build"
+          app_location: "/dist/www.carlosmartos.com/browser" # App source code path
+          output_location: "" # Built app content directory - optional
+          skip_app_build: true
           skip_api_build: true
           ###### End of Repository/Build Configurations ######
-        env:
-          # https://github.com/microsoft/Oryx/blob/main/doc/configuration.md
-          CUSTOM_BUILD_COMMAND: npm ci && npm run build
-          ASTRO_TELEMETRY_DISABLED: 1
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
