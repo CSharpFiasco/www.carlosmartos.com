@@ -18,7 +18,8 @@ export class WorkExperience {
       descBullets: [
         'Microservices',
         'Event-driven architecture',
-        'API development (.NET/GraphQL)',
+        '.NET Web API',
+        'Apollo GraphQL',
         'E2E Tests (Cypress/Playwright)',
         'Unit Tests (Jasmine/xUnit)',
         'Front-end development (Angular)',
