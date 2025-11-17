@@ -18,7 +18,7 @@ jobs:
             with:
               submodules: true
           - name: Run install
-            run: npm install --frozen-lockfile
+            run: npm ci
           - name: Run ESLint
             run: npm run lint
           - name: Run build
