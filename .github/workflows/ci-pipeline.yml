@@ -18,14 +18,14 @@ jobs:
             with:
               submodules: true
           - name: Run install
-            run: npm ci
+            run: yarn install --frozen-lockfile
           - name: Run ESLint
-            run: npm run lint
+            run: yarn run lint
           - name: Run build
-            run: npm run build
+            run: yarn run build
           - name: Run tests
-            run: npm run test:ci
+            run: yarn run test:ci
           - name: Run cypress on Chrome
-            run: npm run cy:test:local
+            run: yarn run cy:test:local
           - name: Run cypress on Firefox
-            run: npm run cy:test:local:firefox
+            run: yarn run cy:test:local:firefox
