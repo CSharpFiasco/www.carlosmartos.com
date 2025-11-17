@@ -2,7 +2,7 @@
   "name": "www.carlosmartos.com",
   "version": "0.0.0",
   "engines": {
-    "node": "22.x",
+    "node": "24.x",
     "npm": "11.x"
   },
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
+    "test:ci": "ng test --no-watch",
     "analyze-bundle": "ng build --configuration=analyze-bundle && source-map-explorer dist/**/*.js --no-border-checks",
     "lint": "ng lint",
     "cy:run:local": "cypress run --env \"base_url=http://localhost:4321\" --browser chrome",
@@ -26,35 +26,32 @@
     "@angular/common": "^20.3.3",
     "@angular/compiler": "^20.3.3",
     "@angular/core": "^20.3.3",
-    "@angular/forms": "^20.3.3",
+    "@angular/forms": "^20.3.12",
     "@angular/platform-browser": "^20.3.3",
-    "@angular/platform-server": "^20.3.3",
-    "@angular/router": "^20.3.3",
+    "@angular/platform-server": "^20.3.12",
+    "@angular/router": "^20.3.12",
     "rxjs": "~7.8.0",
     "tslib": "^2.8.1"
   },
   "devDependencies": {
-    "@angular/build": "^20.3.4",
-    "@angular/cli": "^20.3.4",
-    "@angular/compiler-cli": "^20.3.3",
+    "@angular/build": "^20.3.10",
+    "@angular/cli": "^20.3.10",
+    "@angular/compiler-cli": "^20.3.12",
     "@types/jasmine": "~5.1.0",
-    "@types/node": "^22.18.8",
-    "angular-eslint": "20.3.0",
-    "cypress": "^15.3.0",
-    "eslint": "^9.37.0",
-    "jasmine-core": "^5.12.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "@types/node": "^24.10.1",
+    "angular-eslint": "^20.6.0",
+    "cypress": "^15.6.0",
+    "eslint": "^9.39.1",
+    "jasmine-core": "^5.12.1",
+    "jsdom": "^27.2.0",
     "schema-dts": "^1.1.5",
     "source-map-explorer": "^2.5.3",
     "start-server-and-test": "^2.1.2",
-    "typescript": "~5.8.3",
-    "typescript-eslint": "^8.45.0"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.47.0",
+    "vitest": "^3.2.4"
   },
   "overrides": {
-    "vite": "npm:rolldown-vite@latest"
+    "glob": "^11.0.3"
   }
 }
