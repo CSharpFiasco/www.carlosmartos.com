@@ -21,10 +21,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '24.x'
-      - name: yarn install
-        run: yarn install --frozen-lockfile
+      - name: npm install
+        run: npm install --frozen-lockfile
       - name: Build app
-        run: yarn run build
+        run: npm run build
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
