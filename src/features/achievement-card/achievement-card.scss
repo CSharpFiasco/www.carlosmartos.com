@@ -11,7 +11,7 @@
   @include global.paragraph-fonts();
 }
 .card-subtitle {
-  color: #666666;
+  color: var(--primary-text);
   @include global.paragraph-fonts();
 }
 .achievement-card {
