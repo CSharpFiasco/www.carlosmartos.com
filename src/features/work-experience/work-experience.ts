@@ -10,13 +10,14 @@ import { RgbPipe } from '../../pipes/rgb-pipe';
 export class WorkExperience {
   protected readonly workExperiences = [
     {
-      role: 'Software Developer',
+      role: 'Senior Software Engineer',
       company: 'Hogan Assessments',
       companyLogo: '/images/hogan-logo.svg',
       date: 'March 2023 – Current',
       desc: '.NET 8/Cosmos DB/Angular',
       descBullets: [
         'Microservices',
+        'Kubernetes',
         'Event-driven architecture',
         '.NET Web API',
         'Apollo GraphQL',

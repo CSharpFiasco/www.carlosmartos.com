@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '24.x'
       - name: npm install
-        run: npm ci
+        run: npm ci --omit=dev
       - name: Build app
         run: npm run build
       - name: Deploy
