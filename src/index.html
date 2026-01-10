@@ -9,6 +9,61 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://carlosmartos.com" />
   <link rel="icon" type="image/x-icon" href="favicon.svg">
+  <style>
+    /* Critical CSS for dark/light mode */
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+      --primary-bg: #fff;
+      --primary-text: #13151a;
+      --secondary-bg: #13151a;
+      --secondary-text: #fff;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-bg: #13151a;
+        --primary-text: #fff;
+        --secondary-bg: #fff;
+        --secondary-text: #13151a;
+      }
+    }
+    
+    html {
+      background: var(--primary-bg);
+    }
+    
+    main {
+      color: var(--primary-text);
+    }
+    
+    .text-gradient {
+      background-image: var(--accent-gradient);
+    }
+    
+    .card-title,
+    .card-subtitle {
+      color: var(--primary-text);
+    }
+    
+    .achievement-card,
+    .experience-card {
+      background-color: var(--primary-bg);
+    }
+    
+    .experience-text-role,
+    .experience-text-desc,
+    .subTitle,
+    .experience-text-date {
+      color: var(--primary-text);
+    }
+    
+    .education-school-link {
+      color: var(--primary-text);
+    }
+  </style>
   <!-- Google tag (gtag.js) -->
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-F258RKWXHY"></script>
   <script>

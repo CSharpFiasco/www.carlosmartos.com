@@ -38,7 +38,6 @@
 /* start card */
 .experience-card {
   position: relative;
-  background-color: var(--primary-bg);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid rgba(211, 211, 211, 0.397);
@@ -123,7 +122,6 @@
 .experience-text-role {
   display: block;
   text-align: center;
-  color: var(--primary-text);
   font-weight: 700;
   font-size: 1.5625rem;
   margin: 0px;
@@ -131,14 +129,8 @@
   line-height: normal;
 }
 
-.experience-text-desc,
-.subTitle {
-  color: var(--primary-text);
-}
-
 .experience-text-date {
   text-align: center;
-  color: var(--primary-text);
   font-size: 1.25rem;
   margin: 0px;
   padding-top: 1rem;
