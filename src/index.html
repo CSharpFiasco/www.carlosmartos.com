@@ -10,7 +10,14 @@
   <meta property="og:url" content="https://carlosmartos.com" />
   <link rel="icon" type="image/x-icon" href="favicon.svg">
   <style>
-    /* Critical CSS for dark/light mode */
+    /* Critical CSS for dark/light mode
+     * These styles are duplicated from styles.scss to ensure they load
+     * immediately on page render, preventing FOUC (Flash of Unstyled Content).
+     * Duplication is intentional and necessary for critical CSS strategy.
+     * Any changes to theme colors should be updated in both locations:
+     * 1. Here (index.html) for critical CSS
+     * 2. In styles.scss for the full stylesheet
+     */
     :root {
       --accent: 136, 58, 234;
       --accent-light: 224, 204, 250;
