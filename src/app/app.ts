@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, DOCUMENT, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Greeting } from "../features/greeting/greeting";
 import { Skills } from "../features/skills/skills";
@@ -14,7 +14,7 @@ import { type WithContext, type ProfilePage } from 'schema-dts';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App implements OnInit {
+export class App {
   private readonly profilePageSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
@@ -73,21 +73,24 @@ export class App implements OnInit {
   private readonly indexPageDescription =
   'I am a software Developer experienced in .NET and SQL Server development as well as Angular. I focus on web app refactoring and query tuning.';
 
+
   constructor() {
     const titleService = inject(Title);
     const metaService = inject(Meta);
+    const document = inject(DOCUMENT);
 
     titleService.setTitle('Carlos Martos Portfolio');
     metaService.addTag(
       { name: 'description', content: this.indexPageDescription }
-    )
+    );
 
-  }
-
-  ngOnInit(): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(this.profilePageSchema);
     document.head.appendChild(script);
+
+
+
   }
+
 }
