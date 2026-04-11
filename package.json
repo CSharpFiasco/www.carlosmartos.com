@@ -39,7 +39,7 @@
     "cypress": "^15.13.1",
     "eslint": "^10.2.0",
     "jsdom": "^29.0.2",
-    "schema-dts": "^1.1.5",
+    "schema-dts": "^2.0.0",
     "source-map-explorer": "^2.5.3",
     "start-server-and-test": "^3.0.2",
     "typescript": "^5.9.3",
