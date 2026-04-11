@@ -65,6 +65,10 @@
 a.achievement-tag:hover {
   background: #8c43ce;
 }
+.achievement-link {
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+}
 
 @media (min-width: 1380px) {
   .achievement-card-footer a.achievement-tag {
