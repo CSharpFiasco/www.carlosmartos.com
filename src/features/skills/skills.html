@@ -1,26 +1,25 @@
 <section class="main" id="skills">
   <div class="skills-main-div">
-    <div>
-      <div class="skills-image-div">
-        <img alt="Developer Working" src="{{ skillsSection.imageUrl }}" />
-      </div>
+    <div class="skills-image-div">
+      <img alt="Developer Working" src="{{ skillsSection.imageUrl }}" />
     </div>
-    <div>
-      <div class="skills-text-div">
-        <h2 class="skills-heading">What I do</h2>
-        <p class="skills-text-subtitle">
-          With {{ skillsSection.firstWorkingDate | yearsSinceDate }} years of experience as a software developer, I have a strong background
-          in creating applications, including web and desktop applications, background services, and ETLs. Additionally,
-          I excel in the design of relational databases. My testing strategy encompasses the use of Cypress for end-to-end
-          testing, complemented by Jasmine and xUnit for thorough unit testing.
-        </p>
-      </div>
+    <div class="skills-text-div">
+      <h2 class="skills-heading">What I do</h2>
+      <p class="skills-text-subtitle">
+        With {{ skillsSection.firstWorkingDate | yearsSinceDate }} years of experience as a software developer, I have a strong background
+        in creating and maintaining web and desktop applications, background services, and ETLs.
+      </p>
     </div>
   </div>
   <ul>
-    @for (skills of skillsSection.skills; track skills) {
-      <li class="skills-text">{{skills}}</li>
-    }
+    <li class="skills-text">Develop single page applications with <b>Angular</b> and <b>React</b></li>
+    <li class="skills-text">Develop web applications with <b>ASP.NET Core</b> and <b>Angular</b></li>
+    <li class="skills-text">Develop static generated websites with <b>Astro</b></li>
+    <li class="skills-text">Astro deployment with <b>Azure Static Web App</b></li>
+    <li class="skills-text">Relational database design</li>
+    <li class="skills-text">Refactor of legacy web apps to modern .NET API solutions with <b>Angular</b> front-end</li>
+    <li class="skills-text">Unit testing with <b>xUnit</b> and <b>Jasmine</b></li>
+    <li class="skills-text"><b>Azure DevOps</b> and <b>Github Actions</b> builds and deployments to cloud and on-premise systems</li>
   </ul>
 
 </section>
