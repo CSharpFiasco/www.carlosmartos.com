@@ -1,20 +1,18 @@
 <section class="main" id="education">
   <div class="education-main-div">
-    <div>
-      <div class="education-section">
-        <h2 class="education-heading">Education</h2>
-        <div class="education-card-container">
-          @for (educationCardInfo of educationInfo; track educationCardInfo) {
-              <app-education-card
-                [schoolName]="educationCardInfo.schoolName"
-                [schoolUrl]="educationCardInfo.schoolUrl"
-                [logoUrl]="educationCardInfo.logo"
-                [degree]="educationCardInfo.subHeader"
-                [duration]="educationCardInfo.duration"
-                [bullets]="educationCardInfo.descBullets"
-              ></app-education-card>
-          }
-        </div>
+    <div class="education-section">
+      <h2 class="education-heading">Education</h2>
+      <div class="education-card-container">
+        @for (educationCardInfo of educationInfo; track educationCardInfo) {
+            <app-education-card
+              [schoolName]="educationCardInfo.schoolName"
+              [schoolUrl]="educationCardInfo.schoolUrl"
+              [logoUrl]="educationCardInfo.logo"
+              [degree]="educationCardInfo.subHeader"
+              [duration]="educationCardInfo.duration"
+              [bullets]="educationCardInfo.descBullets"
+            ></app-education-card>
+        }
       </div>
     </div>
     <div>

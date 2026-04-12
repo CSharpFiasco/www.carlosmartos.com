@@ -5,10 +5,6 @@
     gap: 1rem;
   }
 
-  .education-card-logo {
-    text-align: center;
-  }
-
   .education-head {
     display: flex;
     flex-direction: row;
@@ -46,31 +42,9 @@
     margin-top: 1rem;
   }
 
-  .education-roundedimg {
-    object-fit: cover;
-    width: 4rem;
-    height: 4rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    margin: 0.5rem 0;
-  }
-
-  .education-text-bullets > ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
   /* Media Query */
 
   @media (min-width: 768px) {
-    .education-card-logo {
-      text-align: left;
-    }
-    .education-roundedimg {
-      width: 6rem;
-      height: 6rem;
-    }
     .education-text-details > * {
       text-align: left;
     }

@@ -1,6 +1,12 @@
 /* Variables */
 @use "../../variables.scss" as global;
 
+.greeting-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 h1 {
   font-weight: 700;
   text-align: center;
@@ -31,8 +37,12 @@ h1 {
 }
 
 .greeting-image-div > img {
+  max-width: 320px;
   width: 100%;
   height: auto;
+
+  display: block;
+  margin: 0 auto;
 }
 
 .text-gradient {

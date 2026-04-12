@@ -16,11 +16,11 @@ export class Education {
     subHeader: 'Bachelor of Science Computer Science',
     duration: 'September 2013 - May 2017',
     descBullets: [
-      '⚡Data Structures',
-      '⚡Database Systems',
-      '⚡Comparative Programming Languages',
-      '⚡Operating Systems',
-      '⚡Linear Algebra and Matrix Theory',
+      'Data Structures',
+      'Database Systems',
+      'Comparative Programming Languages',
+      'Operating Systems',
+      'Linear Algebra and Matrix Theory',
     ],
   },
 ] as const;

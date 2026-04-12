@@ -6,6 +6,8 @@
   .education-main-div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 100%;
   }
 
   .education-main-div > * {
@@ -13,8 +15,12 @@
   }
 
   .education-image-div > img {
+    max-width: 320px;
     width: 100%;
     height: auto;
+
+    display: block;
+    margin: 0 auto;
   }
 
   .education-heading {
@@ -41,6 +47,11 @@
   @media (min-width: 768px) {
     .education-main-div {
       flex-direction: row;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .education-heading {
