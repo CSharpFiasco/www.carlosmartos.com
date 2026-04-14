@@ -9,7 +9,7 @@ import { AchievementCard } from '../achievement-card/achievement-card';
 })
 export class Achievement {
   protected readonly achievementSection = {
-    title: 'Achievements And Publications',
+    title: 'Publications',
 
     achievementsCards: [
       {

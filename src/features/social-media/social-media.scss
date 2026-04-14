@@ -41,6 +41,8 @@
 
   &.github {
     background-color: #333;
+    padding-right: 1px; // needed because svg is not perfectly centered otherwise
+    padding-top: 1px;
   }
 
   &.stackoverflow {

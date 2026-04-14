@@ -1,7 +1,6 @@
 import { Component, DOCUMENT, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Greeting } from "../features/greeting/greeting";
-import { Skills } from "../features/skills/skills";
 import { Education } from "../features/education/education";
 import { WorkExperience } from "../features/work-experience/work-experience";
 import { Achievement } from "../features/achievement/achievement";
@@ -10,7 +9,7 @@ import { type WithContext, type ProfilePage } from 'schema-dts';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Greeting, Skills, Education, WorkExperience, Achievement],
+  imports: [RouterOutlet, Greeting, Education, WorkExperience, Achievement],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -88,9 +87,6 @@ export class App {
     script.type = 'application/ld+json';
     script.text = JSON.stringify(this.profilePageSchema);
     document.head.appendChild(script);
-
-
-
   }
 
 }
