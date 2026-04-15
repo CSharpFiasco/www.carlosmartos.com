@@ -20,7 +20,6 @@ describe('EducationCard', () => {
     fixture.componentRef.setInput('degree', 'B.S. in Testing');
     fixture.componentRef.setInput('logoUrl', 'logo.png');
     fixture.componentRef.setInput('duration', '2020 - 2024');
-    fixture.componentRef.setInput('bullets', ['Bullet 1', 'Bullet 2']);
   });
 
   it('should create', () => {

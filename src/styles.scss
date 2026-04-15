@@ -1,8 +1,8 @@
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+    --accent: 23, 124, 34;
+    --accent-light: 180, 250, 203;
+    --accent-dark: 14, 54, 27;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-dark)) 30%, white 60%);
     --primary-bg: #fff;
     --primary-text: #13151a;
     --secondary-bg: #13151a;
@@ -15,6 +15,7 @@
       --primary-text: #fff;
       --secondary-bg: #fff;
       --secondary-text: #13151a;
+      --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
     }
   }
   html {

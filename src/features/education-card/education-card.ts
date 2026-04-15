@@ -12,5 +12,4 @@ export class EducationCard {
   public readonly degree = input.required<string>();
   public readonly logoUrl = input.required<string>();
   public readonly duration = input.required<string>();
-  public readonly bullets = input.required<readonly string[]>();
 }
