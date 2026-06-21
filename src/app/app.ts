@@ -1,4 +1,4 @@
-import { Component, DOCUMENT, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, DOCUMENT, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Greeting } from "../features/greeting/greeting";
 import { Education } from "../features/education/education";
@@ -11,7 +11,6 @@ import { type WithContext, type ProfilePage } from 'schema-dts';
   selector: 'app-root',
   imports: [RouterOutlet, Greeting, Education, WorkExperience, Achievement],
   templateUrl: './app.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.scss'
 })
 export class App {

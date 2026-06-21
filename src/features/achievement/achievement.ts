@@ -1,11 +1,10 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import { AchievementCard } from '../achievement-card/achievement-card';
 
 @Component({
   selector: 'app-achievement',
   imports: [AchievementCard],
   templateUrl: './achievement.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './achievement.scss'
 })
 export class Achievement {
