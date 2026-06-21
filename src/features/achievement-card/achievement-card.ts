@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 interface FooterLink {
   readonly name: string;
@@ -9,6 +9,7 @@ interface FooterLink {
   selector: 'app-achievement-card',
   imports: [],
   templateUrl: './achievement-card.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './achievement-card.scss'
 })
 export class AchievementCard {

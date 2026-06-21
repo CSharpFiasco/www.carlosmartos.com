@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RgbPipe } from '../../pipes/rgb-pipe';
 
 @Component({
   selector: 'app-work-experience',
   imports: [RgbPipe],
   templateUrl: './work-experience.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './work-experience.scss'
 })
 export class WorkExperience {

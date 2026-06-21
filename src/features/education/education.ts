@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { EducationCard } from "../education-card/education-card";
 
 @Component({
   selector: 'app-education',
   imports: [EducationCard],
   templateUrl: './education.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './education.scss'
 })
 export class Education {
