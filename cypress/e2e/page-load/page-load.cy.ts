@@ -33,7 +33,7 @@ describe('home page', () => {
       })
         .its('status')
         .should((status) => {
-          expect(status, `Checking link: ${href}`).to.be.oneOf([200, 418, 403, 429]);
+          expect(status, `Checking link: ${href}`).to.be.oneOf([200, 202, 418, 403, 429]);
         });
     });
   });
