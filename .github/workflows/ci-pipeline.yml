@@ -10,22 +10,75 @@ on:
       - main
 
 jobs:
-    build_and_test:
-        runs-on: ubuntu-latest
-        if: github.event_name == 'pull_request' && github.event.action != 'closed'
-        steps:
-          - uses: actions/checkout@v4
-            with:
-              submodules: true
-          - name: Run install
-            run: npm ci
-          - name: Run ESLint
-            run: npm run lint
-          - name: Run build
-            run: npm run build
-          - name: Run tests
-            run: npm run test:ci
-          - name: Run cypress on Chrome
-            run: npm run cy:test:local
-          - name: Run cypress on Firefox
-            run: npm run cy:test:local:firefox
+  lint:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - name: Run ESLint
+        run: npm run lint
+
+  build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - name: Run build
+        run: npm run build
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - name: Run tests
+        run: npm run test:ci
+
+  cypress:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - browser: Chrome
+            script: cy:test:local
+          - browser: Firefox
+            script: cy:test:local:firefox
+    name: Cypress on ${{ matrix.browser }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - name: Run Cypress
+        run: npm run ${{ matrix.script }}
