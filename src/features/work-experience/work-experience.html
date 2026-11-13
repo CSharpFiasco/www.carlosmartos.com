@@ -1,9 +1,11 @@
 <div class="main" id="experience">
   <div class="experience-container" id="workExperience">
-    <div>
-      <h2 class="experience-heading">Experiences</h2>
-      <div class="experience-cards-div">
-        @for(card of workExperiences; track card) {
+    <div class="experience-sections">
+      @for (section of experienceSections; track section.heading) {
+        <section class="experience-section">
+          <h2 class="experience-heading">{{ section.heading }}</h2>
+          <div class="experience-cards-div">
+          @for (card of section.experiences; track card) {
             <div class="experience-card">
               <div [style]="{ background: card.backgroundColor | rgb }" class="experience-banner">
                 <div class="experience-blurred_div"></div>
@@ -20,7 +22,9 @@
               </div>
               <div class="experience-text-details">
                 <strong class="experience-text-role">{{card.role}}</strong>
-                <h2 class="experience-text-date">{{card.date}}</h2>
+                @if ('date' in card) {
+                  <h2 class="experience-text-date">{{card.date}}</h2>
+                }
                 <p class="subTitle experience-text-desc">{{card.desc}}</p>
                 <ul>
                   @for (descBullet of card.descBullets; track descBullet)
@@ -30,8 +34,10 @@
                 </ul>
               </div>
             </div>
-        }
-      </div>
+          }
+          </div>
+        </section>
+      }
     </div>
   </div>
 </div>
