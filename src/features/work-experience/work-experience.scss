@@ -3,6 +3,11 @@
 .main {
   margin-top: global.$section-margin-top;
 }
+
+.experience-section + .experience-section {
+  margin-top: global.$section-margin-top;
+}
+
 .experience-cards-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
